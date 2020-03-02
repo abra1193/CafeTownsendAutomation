@@ -8,23 +8,25 @@ import org.testng.annotations.Test;
 @Test
 public class LogoutTest extends BaseTest {
 
-@Test(priority =  1)
+    @Test(priority = 1)
     @Given("the user is login on the CafeTownsend Portal")
     public void the_user_is_login_on_the_CafeTownsend_Portal() {
 
         Cafetownsend.loginpage().CafeLogin();
 
     }
-    @Test(priority =  2)
+
+    @Test(priority = 2)
     @When("the user clicks on the logout button")
     public void the_user_clicks_on_the_logout_button() {
 
-    Cafetownsend.homePage().WaitForElement(Cafetownsend.homePage().Create);
+        Cafetownsend.homePage().WaitForElement(Cafetownsend.homePage().LogoutButton);
         Cafetownsend.homePage().LogoutButton.click();
 
 
     }
-    @Test(priority =  3)
+
+    @Test(priority = 3)
     @Then("the user is logout from the CafeTownsend Portal")
     public void the_user_is_logout_from_the_CafeTownsend_Portal() {
 
