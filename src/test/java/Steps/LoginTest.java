@@ -3,17 +3,17 @@ package Steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 
-@Test
+
 public class LoginTest extends BaseTest {
 
 
     @Given("the user navigates to the login page")
     public void theUserNavigatesToTheLoginPage() {
         Cafetownsend.loginpage().CafeLogin();
+
 
     }
     @When("the user types the credentials provided on the portal")

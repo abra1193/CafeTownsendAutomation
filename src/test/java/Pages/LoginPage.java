@@ -20,7 +20,7 @@ public class LoginPage extends BasePage {
     public WebElement SubmitButton;
 
     public LoginPage CafeLogin() {
-
+        WaitForElement(username);
         Write(username, "Luke");
         Write(password, "Skywalker");
         Click(SubmitButton);

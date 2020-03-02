@@ -13,7 +13,7 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, 20);
+        wait = new WebDriverWait(driver, 35);
     }
 
     public void WaitForElement(WebElement element) {
@@ -43,5 +43,7 @@ public class BasePage {
         WaitForElement(element);
         Assert.assertEquals(Read(element), expected);
     }
+
+
 
 }
