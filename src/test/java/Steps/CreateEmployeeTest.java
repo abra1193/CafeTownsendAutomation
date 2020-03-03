@@ -37,25 +37,25 @@ public class CreateEmployeeTest extends BaseTest {
 
         Cafetownsend.createEmployee().AddEmployee(firstname, lastname, startdate, email);
     }
-
+    @Parameters({"firstname", "lastname"})
     @Test(priority = 4)
     @Then("the new employee created is displayed on the employee list")
-    public void the_new_employee_created_is_displayed_on_the_employee_list() {
+    public void the_new_employee_created_is_displayed_on_the_employee_list(String firstname, String lastname) {
 
         Cafetownsend.WaitForElement(Cafetownsend.homePage().LogoutButton);
+        Cafetownsend.homePage().SelectEmployeeOnHomePage(firstname + " " + lastname);
 
 
     }
 
-    @Parameters({"firstname", "lastname"})
+
+    @Parameters({"firstname", "lastname", "startdate", "email"})
     @Test(priority = 5)
     @Then("the user validates the employee data was inserted correctly on the CafeTownsend portal")
-    public void the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal(String firstname, String lastname) {
-        Cafetownsend.WaitForElement(Cafetownsend.homePage().HomePageEmployeeList);
-        Cafetownsend.homePage().SelectEmployeeOnHomePage(firstname + " " + lastname);
-        Cafetownsend.WaitForElement(Cafetownsend.createEmployee().Name);
-        //Cafetownsend.Assert(Cafetownsend.createEmployee().Name.getAttribute("value"),firstname);
+    public void the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal(String firstname, String lastname, String startdate, String email)  {
 
+        Cafetownsend.WaitForElement(Cafetownsend.createEmployee().Name);
+        Cafetownsend.createEmployee().ValidateInsertedEmployeeData(firstname,lastname,startdate,email);
 
     }
 

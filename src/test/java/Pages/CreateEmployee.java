@@ -42,4 +42,26 @@ public class CreateEmployee extends BasePage {
         return this;
     }
 
+    public CreateEmployee ValidateInsertedEmployeeData(String Employeename, String EmployeeLastName, String EmployeeStartDate, String EmployeeEmail) {
+
+        if (Name.getAttribute("value").contains(Employeename)  && LastName.getAttribute("value").contains(EmployeeLastName )&& StartDate.getAttribute("value").contains(EmployeeStartDate) && Email.getAttribute("value").contains(EmployeeEmail)) {
+            System.out.println("The Employee data was saved correctly after it was created from the Create Employee Screen");
+        } else {
+
+            System.out.println("The Employee data was not saved correctly after it was created on the Create Employee Screen");
+
+        }
+
+/*
+        Assert(Name, Employeename);
+        LastName.getAttribute("value");
+        Assert(LastName, Employeename);
+        StartDate.getAttribute("value");
+        Assert(StartDate, EmployeeStartDate);
+        Email.getAttribute("value");
+        Assert(Email, Employeename);
+*/
+        return this;
+
+    }
 }

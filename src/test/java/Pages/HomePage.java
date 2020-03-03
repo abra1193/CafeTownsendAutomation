@@ -9,6 +9,8 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 
+import java.util.List;
+
 
 public class HomePage extends BasePage {
 
@@ -32,19 +34,27 @@ public class HomePage extends BasePage {
     @FindBy(how = How.ID, using = "employee-list")
     public WebElement HomePageEmployeeList;
 
-    public HomePage SelectEmployeeOnHomePage(String name) {
+
+    public void SelectEmployeeOnHomePage(String name) {
         WaitForElement(HomePageEmployeeList);
+        List<WebElement> employeeList = driver.findElements(By.id("employee-list"));
+      //  employeeList.stream().forEach(webElement -> {if(webElement.getText().equalsIgnoreCase(name
+   //     ))} );
+    //    employeeList.stream().filter(webElement -> webElement.getText().equals(name)).findFirst().get().click();
+
+/*
         if (
-                HomePageEmployeeList.getText().replaceAll("\n", "").contains(name) == true) {
+
+                HomePageEmployeeList.getText().replaceAll("\n", "").contains(name)) {
+            WaitForElement(driver.findElement(By.xpath("//li[contains(text(),'" + name + "')]")));
             driver.findElement(By.xpath("//li[contains(text(),'" + name + "')]")).click();
             WaitForElement(Edit);
             Click(Edit);
         } else {
             System.out.println("Employee doesn't exist on the Home Page Employee List");
+*/
 
 
-        }
-        return this;
     }
 
     public HomePage CafeLogout() {

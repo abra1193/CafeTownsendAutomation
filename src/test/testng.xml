@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM  "http://testng.org/testng-1.0.dtd">
 <suite name = "Test Suite" verbose="10" configfailurepolicy="skip">
-    <parameter name="firstname" value="TestName"></parameter>
-    <parameter name="lastname" value="TestLastName"></parameter>
-    <parameter name="startdate" value="2020-01-11"></parameter>
-    <parameter name="email" value="testemail1@test.com"></parameter>
+    <parameter name="firstname" value="testabc123"></parameter>
+    <parameter name="lastname" value="testabc"></parameter>
+    <parameter name="startdate" value="2020-11-20"></parameter>
+    <parameter name="email" value="ne95@test.com"></parameter>
 <test name="Complete Tests execution">
     <classes>
         <class name="Steps.CreateEmployeeTest"/>
