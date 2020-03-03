@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class PageManager extends BasePage {
 
-    public PageManager(WebDriver driver) {
+    public PageManager(WebDriver driver){
 
         super(driver);
     }

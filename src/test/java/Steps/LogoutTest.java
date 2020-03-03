@@ -5,7 +5,7 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.testng.annotations.Test;
 
-@Test
+
 public class LogoutTest extends BaseTest {
 
     @Test(priority = 1)
