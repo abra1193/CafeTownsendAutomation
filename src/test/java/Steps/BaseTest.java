@@ -1,4 +1,5 @@
 package Steps;
+
 import Pages.PageManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,23 +20,23 @@ public class BaseTest {
     PageManager Cafetownsend;
 
     @BeforeClass
-    public void InitializeTest(){
+    public void InitializeTest() {
 
-        System.setProperty("webdriver.chrome.driver","C:\\Chrome\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Chrome\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         Cafetownsend = new PageManager(driver);
-        wait = new WebDriverWait(driver,20);
+        wait = new WebDriverWait(driver, 60);
         driver.navigate().to("http://cafetownsend-angular-rails.herokuapp.com/");
     }
+
     @AfterClass
-    public void TeardownTest(){
+    public void TeardownTest() {
 
         driver.quit();
     }
 
 
-
-    }
+}
 
 

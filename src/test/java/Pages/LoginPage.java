@@ -14,18 +14,20 @@ public class LoginPage extends BasePage {
     }
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"login-form\"]/fieldset/label[1]/input")
-    public WebElement username;
+    public WebElement Username;
+
     @FindBy(how = How.XPATH, using = "//*[@id=\"login-form\"]/fieldset/label[2]/input")
-    public WebElement password;
+    public WebElement Password;
+
     @FindBy(how = How.XPATH, using = "//*[@id=\"login-form\"]/fieldset/button")
     public WebElement SubmitButton;
 
-    public LoginPage CafeLogin() {
-        WaitForElement(username);
-        Write(username, "Luke");
-        Write(password, "Skywalker");
-        Click(SubmitButton);
-        return this;
+    public void CafeLogin(String user,String password) {
+        WaitForElement(SubmitButton);
+        Write(Username, user);
+        Write(Password, password);
+        SubmitButton.click();
+
     }
 
 }

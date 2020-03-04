@@ -6,10 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
-
-import java.util.List;
 
 
 public class HomePage extends BasePage {
@@ -35,32 +31,54 @@ public class HomePage extends BasePage {
     public WebElement HomePageEmployeeList;
 
 
-    public void SelectEmployeeOnHomePage(String name) {
+    public void ClickOnTheHomePageEmployee(String name) {
         WaitForElement(HomePageEmployeeList);
-        List<WebElement> employeeList = driver.findElements(By.id("employee-list"));
-      //  employeeList.stream().forEach(webElement -> {if(webElement.getText().equalsIgnoreCase(name
-   //     ))} );
-    //    employeeList.stream().filter(webElement -> webElement.getText().equals(name)).findFirst().get().click();
-
-/*
-        if (
-
-                HomePageEmployeeList.getText().replaceAll("\n", "").contains(name)) {
-            WaitForElement(driver.findElement(By.xpath("//li[contains(text(),'" + name + "')]")));
+        if (HomePageEmployeeList.getText().replaceAll("\n", "").contains(name)) {
             driver.findElement(By.xpath("//li[contains(text(),'" + name + "')]")).click();
-            WaitForElement(Edit);
-            Click(Edit);
-        } else {
-            System.out.println("Employee doesn't exist on the Home Page Employee List");
-*/
-
-
+        }
+        WaitForElement(Edit);
+        Click(Edit);
     }
 
-    public HomePage CafeLogout() {
+    public void ValidatedDeletedEmployee(String name) {
+
+        if (!HomePageEmployeeList.getText().replaceAll("\n", "").contains(name)
+        ) {
+            LogoutButton.click();
+        }
+    }
+
+
+    public void CafeLogout() {
 
         Click(LogoutButton);
-        return this;
+
 
     }
 }
+
+
+      /*  WaitForElement(Create);
+
+      //  List<WebElement> employeeList = HomePageEmployeeList;
+
+        String EmployeeName = driver.findElement(By.xpath("//li[contains(text(),'" + name + "')]")).getText();
+
+     //   String emplHomePageEmployeeList.getAttribute("value");
+
+        for (WebElement element : employeeList)
+            if(element.getText().contains(EmployeeName)) element.click();
+
+        Optional<WebElement> found = empty();
+        for (WebElement element : employeeList) {
+            if (element.getText().contains(EmployeeName)) {
+                found = Optional.of(element);
+                break;
+            }
+        }
+        found.get().click();
+
+*/
+
+
+

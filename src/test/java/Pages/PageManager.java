@@ -21,9 +21,9 @@ public class PageManager extends BasePage {
         return homePage;
     }
 
-    public CreateEmployee createEmployee() {
-        CreateEmployee createEmployee = PageFactory.initElements(driver, CreateEmployee.class);
-        return createEmployee;
+    public Employees employees() {
+        Employees employees = PageFactory.initElements(driver, Employees.class);
+        return employees;
 
     }
 }

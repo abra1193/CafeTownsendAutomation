@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM  "http://testng.org/testng-1.0.dtd">
-<suite name = "Test Suite" verbose="10" configfailurepolicy="skip">
-    <parameter name="firstname" value="testabc123"></parameter>
-    <parameter name="lastname" value="testabc"></parameter>
-    <parameter name="startdate" value="2020-11-20"></parameter>
-    <parameter name="email" value="ne95@test.com"></parameter>
-<test name="Complete Tests execution">
+<suite name = "CafetownSend Tests" verbose="10" configfailurepolicy="skip">
+    <parameter name="firstname" value="PAPPA"></parameter>
+    <parameter name="lastname" value="AUTOMATED"></parameter>
+    <parameter name="startdate" value="2015-11-25"></parameter>
+    <parameter name="email" value="RARARARARA@test.com"></parameter>
+    <parameter name="user" value="Luke"></parameter>
+    <parameter name="password" value="Skywalker"></parameter>
+      <test name="Complete tests execution">
     <classes>
-        <class name="Steps.CreateEmployeeTest"/>
+
+        <class name="Steps.DeleteEmployeeTest"/>
+
     </classes>
 </test>
 </suite>
