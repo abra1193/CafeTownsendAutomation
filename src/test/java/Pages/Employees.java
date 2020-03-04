@@ -37,7 +37,7 @@ public class Employees extends BasePage {
     @FindBy(how = How.XPATH, using = "//div/button[@type='submit']")
     public WebElement UpdateButton;
 
-    @FindBy(how = How.XPATH, using = "//div/p[@class='main-button']")
+    @FindBy(how = How.XPATH, using = "//div/p[contains(text(),'Delete')]")
     public WebElement DeleteButton;
 
     public void AddEmployee(String Employeename, String EmployeeLastName, String EmployeeStartDate, String EmployeeEmail) {
@@ -47,6 +47,8 @@ public class Employees extends BasePage {
         Write(StartDate, EmployeeStartDate);
         Write(Email, EmployeeEmail);
         AddButton.click();
+
+
     }
 
     public void ValidateInsertedEmployee(String employeename, String employeeLastName, String employeeStartDate, String employeeEmail) {
@@ -55,7 +57,8 @@ public class Employees extends BasePage {
                 && LastName.getAttribute("value").contains(employeeLastName)
                 && StartDate.getAttribute("value").contains(employeeStartDate)
                 && Email.getAttribute("value").contains(employeeEmail))
-            BackButton.click();
+            System.out.println("Employee: '" + employeename + " " + employeeLastName +"' was created correctly");
+        BackButton.click();
     }
 
 

@@ -14,6 +14,7 @@ public class LoginTest extends BaseTest {
     @Test(priority = 1)
     @Given("the user navigates to the login page")
     public void theUserNavigatesToTheLoginPage(String user, String password) {
+
         Cafetownsend.loginpage().CafeLogin(user, password);
 
 

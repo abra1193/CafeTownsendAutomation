@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.Wait;
 
 
 public class HomePage extends BasePage {
@@ -31,20 +32,17 @@ public class HomePage extends BasePage {
     public WebElement HomePageEmployeeList;
 
 
-    public void ClickOnTheHomePageEmployee(String name) {
-        WaitForElement(HomePageEmployeeList);
-        if (HomePageEmployeeList.getText().replaceAll("\n", "").contains(name)) {
-            driver.findElement(By.xpath("//li[contains(text(),'" + name + "')]")).click();
-        }
-        WaitForElement(Edit);
-        Click(Edit);
+    public void ClickEmployeeOnHomePage(String name) {
+        WaitForElement(driver.findElement(By.xpath("//li[contains(text(),'" + name + "')]")));
+        actions.doubleClick(driver.findElement(By.xpath("//li[contains(text(),'" + name + "')]"))).perform();
+
     }
 
     public void ValidatedDeletedEmployee(String name) {
-
+        WaitForElement(HomePageEmployeeList);
         if (!HomePageEmployeeList.getText().replaceAll("\n", "").contains(name)
         ) {
-            LogoutButton.click();
+           System.out.println("Employee: " + name + "  was deleted correctly");
         }
     }
 
