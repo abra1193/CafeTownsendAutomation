@@ -13,8 +13,11 @@
     <parameter name="newemail" value="SHIRT@test.com"></parameter>
       <test name="Complete tests execution">
     <classes>
+        <class name="Steps.LoginTest"/>
+        <class name="Steps.LogoutTest"/>
         <class name="Steps.CreateEmployeeTest"/>
- 
+        <class name="Steps.EditEmployeeTest"/>
+        <class name="Steps.DeleteEmployeeTest"/>
 
     </classes>
 </test>

@@ -63,18 +63,17 @@ public class Employees extends BasePage {
         for (WebElement label : employeeformfields)
             if (label.getAttribute("value").equals((employeename)) || label.getAttribute("value").equals((employeeLastName))
                     || label.getAttribute("value").equals((employeeStartDate)) || label.getAttribute("value").equals((employeeStartDate))) {
-                System.out.println("Employee" + " " + employeename + employeeLastName + " " + "was created correctly");
+                System.out.println("Employee" + " " + employeename +""+ employeeLastName + " " + "was created correctly");
                 WaitForElement(EmployeeForm);
                 Click(BackButton);
             } else {
-                System.out.println("Employee" + " " + employeename + employeeLastName + " " + "was not created correctly");
+                System.out.println("Employee" + " " + employeename +" "+ employeeLastName + " " + "was not created correctly");
             }
 
     }
 
-
     public void EditEmployee(String Employeename, String EmployeeLastName, String EmployeeStartDate, String EmployeeEmail) {
-
+        WaitForElement(Name);
         Name.clear();
         Write(Name, Employeename);
         LastName.clear();

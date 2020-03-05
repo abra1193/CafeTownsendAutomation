@@ -54,7 +54,6 @@ public class CreateEmployeeTest extends BaseTest {
     public void the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal(String firstname, String lastname, String startdate, String email) {
 
         Cafetownsend.homePage().Edit.click();
-        Cafetownsend.WaitForElement(Cafetownsend.employees().Name);
         Cafetownsend.employees().ValidateInsertedEmployee(firstname, lastname, startdate, email);
         Cafetownsend.WaitForElement(Cafetownsend.homePage().LogoutButton);
         Cafetownsend.homePage().CafeLogout();
