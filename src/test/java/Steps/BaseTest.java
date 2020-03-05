@@ -26,7 +26,7 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         Cafetownsend = new PageManager(driver);
-        wait = new WebDriverWait(driver, 60);
+        wait = new WebDriverWait(driver, 50);
         driver.navigate().to("http://cafetownsend-angular-rails.herokuapp.com/");
     }
 

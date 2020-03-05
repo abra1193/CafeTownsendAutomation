@@ -33,6 +33,7 @@ public class CreateEmployeeTest extends BaseTest {
     public void the_user_types_the_data_to_create_the_new_employee(String firstname, String lastname, String startdate, String email) {
 
         Cafetownsend.employees().AddEmployee(firstname, lastname, startdate, email);
+       // Cafetownsend.WaitForElement(Cafetownsend.homePage().HomePageEmployeeList);
     }
 
     @Parameters({"firstname", "lastname"})
@@ -40,7 +41,7 @@ public class CreateEmployeeTest extends BaseTest {
     @Then("the new employee created is displayed on the employee list")
     public void the_new_employee_created_is_displayed_on_the_employee_list(String firstname, String lastname) {
 
-        Cafetownsend.WaitForElement(Cafetownsend.homePage().HomePageEmployeeList);
+
         Cafetownsend.homePage().ClickEmployeeOnHomePage(firstname + " " + lastname);
 
     }
@@ -50,7 +51,6 @@ public class CreateEmployeeTest extends BaseTest {
     @Then("the user validates the employee data was inserted correctly on the CafeTownsend portal")
     public void the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal(String firstname, String lastname, String startdate, String email) {
 
-        Cafetownsend.WaitForElement(Cafetownsend.employees().Name);
         Cafetownsend.employees().ValidateInsertedEmployee(firstname, lastname, startdate, email);
         Cafetownsend.WaitForElement(Cafetownsend.homePage().LogoutButton);
         Cafetownsend.homePage().CafeLogout();

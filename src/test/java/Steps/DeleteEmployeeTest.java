@@ -23,8 +23,9 @@ public class DeleteEmployeeTest extends BaseTest {
     @Test(priority = 2)
     @When("the user selects an employee from the employee list")
     public void the_user_selects_an_employee_from_the_employee_list(String newfirstname, String newlastname) {
-        Cafetownsend.WaitForElement(Cafetownsend.homePage().HomePageEmployeeList);
+
         Cafetownsend.homePage().ClickEmployeeOnHomePage(newfirstname + " " + newlastname);
+        Cafetownsend.WaitForElement(Cafetownsend.homePage().HomePageEmployeeList);
     }
 
     @Test(priority = 3)

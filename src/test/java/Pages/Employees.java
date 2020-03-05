@@ -52,7 +52,7 @@ public class Employees extends BasePage {
     }
 
     public void ValidateInsertedEmployee(String employeename, String employeeLastName, String employeeStartDate, String employeeEmail) {
-        WaitForElement(Name);
+
         if (Name.getAttribute("value").contains(employeename)
                 && LastName.getAttribute("value").contains(employeeLastName)
                 && StartDate.getAttribute("value").contains(employeeStartDate)
