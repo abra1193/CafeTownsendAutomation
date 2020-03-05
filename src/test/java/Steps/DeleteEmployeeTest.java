@@ -41,6 +41,7 @@ public class DeleteEmployeeTest extends BaseTest {
     @Test(priority = 4)
     @Then("the user validates the employee was deleted correctly from the CafeTownsend portal employee list")
     public void theUserValidatesTheEmployeeWasDeletedCorrectlyFromTheCafeTownsendPortalEmployeeList(String newfirstname, String newlastname) {
+
         driver.switchTo().alert().accept();
         driver.switchTo().defaultContent();
         Cafetownsend.WaitForElement(Cafetownsend.homePage().HomePageEmployeeList);

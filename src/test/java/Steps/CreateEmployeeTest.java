@@ -33,7 +33,6 @@ public class CreateEmployeeTest extends BaseTest {
     public void the_user_types_the_data_to_create_the_new_employee(String firstname, String lastname, String startdate, String email) {
 
         Cafetownsend.employees().AddEmployee(firstname, lastname, startdate, email);
-        // Cafetownsend.WaitForElement(Cafetownsend.homePage().HomePageEmployeeList);
     }
 
     @Parameters({"firstname", "lastname"})
