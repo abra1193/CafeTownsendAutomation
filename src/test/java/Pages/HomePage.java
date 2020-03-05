@@ -38,19 +38,20 @@ public class HomePage extends BasePage {
 
     public void ClickEmployeeOnHomePage(String name) {
         WaitForElement(HomePageEmployeeList);
+        Click(HomePageEmployeeList);
         List<WebElement> employee = HomePageEmployeeList.findElements(By.tagName("li"));
-        for (WebElement li : employee) {
+        for (WebElement li : employee)
             if (li.getText().equals(name))
-                actions.moveToElement(li).doubleClick().perform();
-        }
+                Click(li);
+        WaitForElement(HomePageEmployeeList);
+
     }
 
     public void ValidatedDeletedEmployee(String name) {
-        WaitForElement(HomePageEmployeeList);
         List<WebElement> employee = HomePageEmployeeList.findElements(By.tagName("li"));
         for (WebElement li : employee) {
             if (!li.getText().equals(name))
-                System.out.println("Employee: " + name + "  was deleted correctly");
+                WaitForElement(HomePageEmployeeList);
         }
 
     }

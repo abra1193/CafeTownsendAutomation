@@ -25,12 +25,14 @@ public class DeleteEmployeeTest extends BaseTest {
     public void the_user_selects_an_employee_from_the_employee_list(String newfirstname, String newlastname) {
 
         Cafetownsend.homePage().ClickEmployeeOnHomePage(newfirstname + " " + newlastname);
-        Cafetownsend.WaitForElement(Cafetownsend.homePage().HomePageEmployeeList);
+        Cafetownsend.homePage().Edit.click();
+
     }
 
     @Test(priority = 3)
     @And("the user clicks on the Delete button")
     public void theUserClicksOnTheDeleteButton() {
+
         Cafetownsend.WaitForElement(Cafetownsend.employees().Name);
         Cafetownsend.employees().DeleteButton.click();
     }

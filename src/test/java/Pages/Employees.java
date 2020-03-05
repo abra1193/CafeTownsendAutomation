@@ -1,10 +1,13 @@
 package Pages;
 
 import Base.BasePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+
+import java.util.List;
 
 public class Employees extends BasePage {
 
@@ -40,6 +43,9 @@ public class Employees extends BasePage {
     @FindBy(how = How.XPATH, using = "//div/p[contains(text(),'Delete')]")
     public WebElement DeleteButton;
 
+    @FindBy(how = How.XPATH, using = "//form[@name='employeeForm']/fieldset/label")
+    public WebElement EmployeeForm;
+
     public void AddEmployee(String Employeename, String EmployeeLastName, String EmployeeStartDate, String EmployeeEmail) {
         WaitForElement(Name);
         Write(Name, Employeename);
@@ -52,13 +58,18 @@ public class Employees extends BasePage {
     }
 
     public void ValidateInsertedEmployee(String employeename, String employeeLastName, String employeeStartDate, String employeeEmail) {
+        WaitForElement(EmployeeForm);
+        List<WebElement> employeeformfields = EmployeeForm.findElements(By.tagName("input"));
+        for (WebElement label : employeeformfields)
+            if (label.getAttribute("value").equals((employeename)) || label.getAttribute("value").equals((employeeLastName))
+                    || label.getAttribute("value").equals((employeeStartDate)) || label.getAttribute("value").equals((employeeStartDate))) {
+                System.out.println("Employee" + " " + employeename + employeeLastName + " " + "was created correctly");
+                WaitForElement(EmployeeForm);
+                Click(BackButton);
+            } else {
+                System.out.println("Employee" + " " + employeename + employeeLastName + " " + "was not created correctly");
+            }
 
-        if (Name.getAttribute("value").contains(employeename)
-                && LastName.getAttribute("value").contains(employeeLastName)
-                && StartDate.getAttribute("value").contains(employeeStartDate)
-                && Email.getAttribute("value").contains(employeeEmail))
-            System.out.println("Employee: '" + employeename + " " + employeeLastName +"' was created correctly");
-        BackButton.click();
     }
 
 

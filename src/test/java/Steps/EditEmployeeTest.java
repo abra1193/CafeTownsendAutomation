@@ -33,7 +33,7 @@ public class EditEmployeeTest extends BaseTest {
     @And("the user clicks on the Edit button")
     public void the_user_clicks_on_the_Edit_button() {
         Cafetownsend.WaitForElement(Cafetownsend.homePage().Edit);
-       // Cafetownsend.homePage().Edit.click();
+        Cafetownsend.homePage().Edit.click();
         Cafetownsend.WaitForElement(Cafetownsend.employees().BackButton);
 
     }
@@ -44,6 +44,7 @@ public class EditEmployeeTest extends BaseTest {
     public void the_user_edits_an_employee(String newfirstname, String newlastname, String newstardate, String newemail) {
 
         Cafetownsend.employees().EditEmployee(newfirstname, newlastname, newstardate, newemail);
+        Cafetownsend.homePage().ClickEmployeeOnHomePage(newfirstname + " " + newlastname);
 
     }
 
@@ -52,8 +53,7 @@ public class EditEmployeeTest extends BaseTest {
     @Then("the user validates the employee data was edited correctly on the CafeTownsend portal")
     public void the_user_validates_the_employee_data_was_edited_correctly_on_the_CafeTownsend_portal(String newfirstname, String newlastname, String newstardate, String newemail) {
 
-        Cafetownsend.WaitForElement(Cafetownsend.homePage().HomePageEmployeeList);
-        Cafetownsend.homePage().ClickEmployeeOnHomePage(newfirstname + " " + newlastname);
+        Cafetownsend.homePage().Edit.click();
         Cafetownsend.employees().ValidateInsertedEmployee(newfirstname, newlastname, newstardate, newemail);
         Cafetownsend.homePage().CafeLogout();
         Cafetownsend.WaitForElement(Cafetownsend.loginpage().SubmitButton);

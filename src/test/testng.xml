@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM  "http://testng.org/testng-1.0.dtd">
 <suite name = "CafetownSend Tests" verbose="10" configfailurepolicy="skip">
-    <parameter name="firstname" value="OOL"></parameter>
-    <parameter name="lastname" value="LAMBDA"></parameter>
+    <parameter name="firstname" value="JILL"></parameter>
+    <parameter name="lastname" value="VALENTINE"></parameter>
     <parameter name="startdate" value="2015-11-27"></parameter>
     <parameter name="email" value="POLO@test.com"></parameter>
     <parameter name="user" value="Luke"></parameter>
     <parameter name="password" value="Skywalker"></parameter>
-    <parameter name="newfirstname" value="e32423"></parameter>
-    <parameter name="newlastname" value="NI1CE"></parameter>
+    <parameter name="newfirstname" value="LEON"></parameter>
+    <parameter name="newlastname" value="KENNEDY"></parameter>
     <parameter name="newstartdate" value="2015-11-27"></parameter>
     <parameter name="newemail" value="SHIRT@test.com"></parameter>
       <test name="Complete tests execution">
     <classes>
         <class name="Steps.CreateEmployeeTest"/>
+ 
 
     </classes>
 </test>
