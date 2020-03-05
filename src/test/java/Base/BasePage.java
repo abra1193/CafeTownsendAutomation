@@ -1,10 +1,8 @@
 package Base;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,6 +19,7 @@ public class BasePage {
         wait = new WebDriverWait(driver, 50);
         actions = new Actions(driver);
         actions.perform();
+
     }
 
 
@@ -51,23 +50,7 @@ public class BasePage {
         WaitForElement(element);
         Assert.assertEquals(Read(element), expected);
     }
-/*
-    public boolean RetryClick(WebElement element) {
-        boolean result = false;
-        int attemps = 0;
-        while (attemps < 2) {
-            try {
-                element.click();
-                result = true;
-                break;
 
-            } catch (StaleElementReferenceException e) {
-
-            }
-
-            attemps++;
-        }
-        return result;*/
     }
 
 

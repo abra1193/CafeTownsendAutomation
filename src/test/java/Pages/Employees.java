@@ -48,13 +48,15 @@ public class Employees extends BasePage {
 
     public void AddEmployee(String Employeename, String EmployeeLastName, String EmployeeStartDate, String EmployeeEmail) {
         WaitForElement(Name);
-        Write(Name, Employeename);
-        Write(LastName, EmployeeLastName);
-        Write(StartDate, EmployeeStartDate);
-        Write(Email, EmployeeEmail);
+        Write(Name,
+                Employeename);
+        Write(LastName,
+                EmployeeLastName);
+        Write(StartDate,
+                EmployeeStartDate);
+        Write(Email,
+                EmployeeEmail);
         AddButton.click();
-
-
     }
 
     public void ValidateInsertedEmployee(String employeename, String employeeLastName, String employeeStartDate, String employeeEmail) {
@@ -62,26 +64,29 @@ public class Employees extends BasePage {
         List<WebElement> employeeformfields = EmployeeForm.findElements(By.tagName("input"));
         for (WebElement label : employeeformfields)
             if (label.getAttribute("value").equals((employeename)) || label.getAttribute("value").equals((employeeLastName))
-                    || label.getAttribute("value").equals((employeeStartDate)) || label.getAttribute("value").equals((employeeStartDate))) {
-                System.out.println("Employee" + " " + employeename +""+ employeeLastName + " " + "was created correctly");
+                    || label.getAttribute("value").equals((employeeStartDate)) || label.getAttribute("value").equals((employeeStartDate)) || label.getAttribute("value").equals((employeeEmail))) {
+                System.out.println("Employee" + " " + employeename + "" + employeeLastName + " " + "was created correctly");
                 WaitForElement(EmployeeForm);
                 Click(BackButton);
-            } else {
-                System.out.println("Employee" + " " + employeename +" "+ employeeLastName + " " + "was not created correctly");
-            }
+            } else
+                System.out.printf("Employee %s %s was not created correctly%n", employeename, employeeLastName);
 
     }
 
     public void EditEmployee(String Employeename, String EmployeeLastName, String EmployeeStartDate, String EmployeeEmail) {
         WaitForElement(Name);
         Name.clear();
-        Write(Name, Employeename);
+        Write(Name,
+                Employeename);
         LastName.clear();
-        Write(LastName, EmployeeLastName);
+        Write(LastName,
+                EmployeeLastName);
         StartDate.clear();
-        Write(StartDate, EmployeeStartDate);
+        Write(StartDate,
+                EmployeeStartDate);
         Email.clear();
-        Write(Email, EmployeeEmail);
+        Write(Email,
+                EmployeeEmail);
         UpdateButton.click();
 
     }

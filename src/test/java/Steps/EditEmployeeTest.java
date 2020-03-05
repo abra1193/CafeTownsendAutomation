@@ -7,9 +7,6 @@ import io.cucumber.java.en.When;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class EditEmployeeTest extends BaseTest {
 
 
