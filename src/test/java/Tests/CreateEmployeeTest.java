@@ -1,6 +1,7 @@
-package Steps;
+package Tests;
 
 
+import Pages.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -15,7 +16,7 @@ public class CreateEmployeeTest extends BaseTest {
     @Given("the user login on the CafeTownsend portal")
     public void the_user_login_on_the_CafeTownsend_portal(String user, String password) {
 
-        cafetownsend.loginpage().cafeLogIn(user, password);
+        cafetownsend.loginPage().cafeLogIn(user, password);
     }
 
     @Test(priority = 2)
@@ -41,7 +42,7 @@ public class CreateEmployeeTest extends BaseTest {
     public void the_new_employee_created_is_displayed_on_the_employee_list(String firstnameCreate, String lastnameCreate) {
 
 
-        cafetownsend.homePage().selectEmployee(firstnameCreate + " " + lastnameCreate);
+        cafetownsend.homePage().selectEmployee(String.format("%s %s", firstnameCreate, lastnameCreate));
         cafetownsend.waitForElement(cafetownsend.homePage().edit);
 
     }
@@ -49,7 +50,7 @@ public class CreateEmployeeTest extends BaseTest {
     @Parameters({"firstnameCreate", "lastnameCreate", "startdateCreate", "emailCreate"})
     @Test(priority = 5)
     @Then("the user validates the employee data was inserted correctly on the CafeTownsend portal")
-    public void the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal(String firstnameCreate, String lastnameCreate, String startdateCreate, String emailCreate)  {
+    public void the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal(String firstnameCreate, String lastnameCreate, String startdateCreate, String emailCreate) {
 
         cafetownsend.homePage().edit.click();
         cafetownsend.employees().validateEmployeeInserted(firstnameCreate, lastnameCreate, startdateCreate, emailCreate);

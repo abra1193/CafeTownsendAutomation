@@ -1,4 +1,4 @@
-package Steps;
+package Tests;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -16,7 +16,7 @@ public class DeleteEmployeeTest extends BaseTest {
     @Given("the user login on the CafeTownsend portal")
     public void the_user_login_on_the_CafeTownsend_portal(String user, String password) {
 
-        cafetownsend.loginpage().cafeLogIn(user, password);
+        cafeTownSend.loginPage().cafeLogIn(user, password);
     }
 
     @Parameters({"firstnameDelete", "lastnameDelete", "startdateDelete", "emailDelete"})
@@ -27,7 +27,7 @@ public class DeleteEmployeeTest extends BaseTest {
         cafetownsend.waitForElement(cafetownsend.homePage().create);
         cafetownsend.homePage().create.click();
         cafetownsend.employees().addEmployee(firstnameDelete, lastnameDelete, startdateDelete, emailDelete);
-        cafetownsend.homePage().selectEmployee(firstnameDelete + " " + lastnameDelete);
+        cafetownsend.homePage().selectEmployee(String.format("%s %s", firstnameDelete, lastnameDelete));
         cafetownsend.homePage().edit.click();
 
     }
@@ -47,7 +47,7 @@ public class DeleteEmployeeTest extends BaseTest {
 
         driver.switchTo().alert().accept();
         cafetownsend.waitForElement(cafetownsend.homePage().homePageEmployeeList);
-        cafetownsend.homePage().selectEmployee(firstnameDelete + " " + lastnameDelete);
+        cafetownsend.homePage().validateEmployeeDeleted(String.format("%s %s", firstnameDelete, lastnameDelete));
         cafetownsend.waitForElement(cafetownsend.homePage().logoutButton);
         cafetownsend.homePage().cafeLogOut();
     }

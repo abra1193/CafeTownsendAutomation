@@ -5,14 +5,14 @@
         <parameter name="user" value="Luke"/>
         <parameter name="password" value="Skywalker"/>
         <classes>
-            <class name="Steps.LoginTest"/>
+            <class name="Tests.LoginTest"/>
         </classes>
     </test>
     <test name="Logout Test">
         <parameter name="user" value="Luke"/>
         <parameter name="password" value="Skywalker"/>
         <classes>
-            <class name="Steps.LogoutTest"/>
+            <class name="Tests.LogoutTest"/>
         </classes>
     </test>
     <test name="Create Employee Test">
@@ -23,7 +23,7 @@
         <parameter name="startdateCreate" value="2020-01-01"/>
         <parameter name="emailCreate" value="CREATEUSER@test.com"/>
         <classes>
-            <class name="Steps.CreateEmployeeTest"/>
+            <class name="Tests.CreateEmployeeTest"/>
         </classes>
     </test>
     <test name="Edit Employee Test">
@@ -38,7 +38,7 @@
         <parameter name="newstartdate" value="2020-01-01"/>
         <parameter name="newemail" value="NEWNAME@test.com"/>
         <classes>
-            <class name="Steps.EditEmployeeTest"/>
+            <class name="Tests.EditEmployeeTest"/>
         </classes>
     </test>
     <test name="Delete Employee Test">
@@ -49,7 +49,7 @@
         <parameter name="startdateDelete" value="2020-01-01"/>
         <parameter name="emailDelete" value="DELETEUSER@test.com"/>
         <classes>
-            <class name="Steps.DeleteEmployeeTest"/>
+            <class name="Tests.DeleteEmployeeTest"/>
         </classes>
     </test>
 </suite>

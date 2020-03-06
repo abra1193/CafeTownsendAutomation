@@ -41,9 +41,10 @@ public class HomePage extends BasePage {
             if (li.getText().equals(name))
                 click(li);
         waitForElement(homePageEmployeeList);
+
     }
 
-    public void ValidateEmployeeDeleted(String name) {
+    public void validateEmployeeDeleted(String name) {
         List<WebElement> employee = homePageEmployeeList.findElements(By.tagName("li"));
         for (WebElement li : employee) {
             if (!li.getText().equals(name))

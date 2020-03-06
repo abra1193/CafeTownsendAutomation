@@ -57,12 +57,13 @@ public class Employees extends BasePage {
         write(email,
                 employeeEmail);
         addButton.click();
+
     }
 
     public void validateEmployeeInserted(String employeename, String employeeLastName, String employeeStartDate, String employeeEmail) {
         waitForElement(employeeForm);
-        List<WebElement> employeeformfields = employeeForm.findElements(By.tagName("input"));
-        for (WebElement label : employeeformfields)
+        List<WebElement> employeefields = employeeForm.findElements(By.tagName("input"));
+        for (WebElement label : employeefields)
             if (label.getAttribute("value").equals((employeename)) || label.getAttribute("value").equals((employeeLastName))
                     || label.getAttribute("value").equals((employeeStartDate)) || label.getAttribute("value").equals((employeeStartDate)) || label.getAttribute("value").equals((employeeEmail))) {
                 System.out.printf("Employee %s %s data was inserted correctly%n", employeename, employeeLastName);

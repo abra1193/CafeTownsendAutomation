@@ -23,6 +23,7 @@ public class LoginPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//*[@id='login-form']/fieldset/button")
     public WebElement submitButton;
 
+
     public void cafeLogIn(String user,String pass) {
         waitForElement(submitButton);
         write(username, user);
