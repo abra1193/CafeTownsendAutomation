@@ -1,24 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM  "http://testng.org/testng-1.0.dtd">
-<suite name = "CafetownSend Tests" verbose="10" configfailurepolicy="skip">
-    <parameter name="firstname" value="JILL"></parameter>
-    <parameter name="lastname" value="VALENTINE"></parameter>
-    <parameter name="startdate" value="2015-11-27"></parameter>
-    <parameter name="email" value="POLO@test.com"></parameter>
-    <parameter name="user" value="Luke"></parameter>
-    <parameter name="password" value="Skywalker"></parameter>
-    <parameter name="newfirstname" value="LEON"></parameter>
-    <parameter name="newlastname" value="KENNEDY"></parameter>
-    <parameter name="newstartdate" value="2015-11-27"></parameter>
-    <parameter name="newemail" value="SHIRT@test.com"></parameter>
-      <test name="Complete tests execution">
-    <classes>
-        <class name="Steps.LoginTest"/>
-        <class name="Steps.LogoutTest"/>
-        <class name="Steps.CreateEmployeeTest"/>
-        <class name="Steps.EditEmployeeTest"/>
-        <class name="Steps.DeleteEmployeeTest"/>
-
-    </classes>
-</test>
+<suite name="CafetownSend Tests" verbose="10">
+    <test name="Login Test">
+        <parameter name="user" value="Luke"/>
+        <parameter name="password" value="Skywalker"/>
+        <classes>
+            <class name="Steps.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Logout Test">
+        <parameter name="user" value="Luke"/>
+        <parameter name="password" value="Skywalker"/>
+        <classes>
+            <class name="Steps.LogoutTest"/>
+        </classes>
+    </test>
+    <test name="Create Employee Test">
+        <parameter name="user" value="Luke"/>
+        <parameter name="password" value="Skywalker"/>
+        <parameter name="firstnameCreate" value="CREATE"/>
+        <parameter name="lastnameCreate" value="USER"/>
+        <parameter name="startdateCreate" value="2020-01-01"/>
+        <parameter name="emailCreate" value="CREATEUSER@test.com"/>
+        <classes>
+            <class name="Steps.CreateEmployeeTest"/>
+        </classes>
+    </test>
+    <test name="Edit Employee Test">
+        <parameter name="user" value="Luke"/>
+        <parameter name="password" value="Skywalker"/>
+        <parameter name="firstnameEdit" value="EDIT"/>
+        <parameter name="lastnameEdit" value="USER"/>
+        <parameter name="startdateEdit" value="2020-01-01"/>
+        <parameter name="emailEdit" value="EDITUSER@test.com"/>
+        <parameter name="newfirstname" value="NEWNAME"/>
+        <parameter name="newlastname" value="NEWLASTNAME"/>
+        <parameter name="newstartdate" value="2020-01-01"/>
+        <parameter name="newemail" value="NEWNAME@test.com"/>
+        <classes>
+            <class name="Steps.EditEmployeeTest"/>
+        </classes>
+    </test>
+    <test name="Delete Employee Test">
+        <parameter name="user" value="Luke"/>
+        <parameter name="password" value="Skywalker"/>
+        <parameter name="firstnameDelete" value="DELETE"/>
+        <parameter name="lastnameDelete" value="USER"/>
+        <parameter name="startdateDelete" value="2020-01-01"/>
+        <parameter name="emailDelete" value="DELETEUSER@test.com"/>
+        <classes>
+            <class name="Steps.DeleteEmployeeTest"/>
+        </classes>
+    </test>
 </suite>
+

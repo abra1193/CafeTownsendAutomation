@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+
 import java.util.List;
 
 
@@ -17,44 +18,43 @@ public class HomePage extends BasePage {
     }
 
     @FindBy(how = How.ID, using = "bAdd")
-    public WebElement Create;
+    public WebElement create;
 
     @FindBy(how = How.ID, using = "bEdit")
-    public WebElement Edit;
+    public WebElement edit;
 
     @FindBy(how = How.ID, using = "bDelete")
-    public WebElement Delete;
+    public WebElement delete;
 
     @FindBy(how = How.XPATH, using = "//*[contains(text(),'Logout')]")
-    public WebElement LogoutButton;
+    public WebElement logoutButton;
 
     @FindBy(how = How.XPATH, using = "//*[@id='employee-list-container']/ul[@id='employee-list']")
-    public WebElement HomePageEmployeeList;
+    public WebElement homePageEmployeeList;
 
 
-    public void ClickEmployeeOnHomePage(String name) {
-        WaitForElement(HomePageEmployeeList);
-        Click(HomePageEmployeeList);
-        List<WebElement> employee = HomePageEmployeeList.findElements(By.tagName("li"));
+    public void selectEmployee(String name) {
+        waitForElement(homePageEmployeeList);
+        click(homePageEmployeeList);
+        List<WebElement> employee = homePageEmployeeList.findElements(By.tagName("li"));
         for (WebElement li : employee)
             if (li.getText().equals(name))
-                Click(li);
-        WaitForElement(HomePageEmployeeList);
-
+                click(li);
+        waitForElement(homePageEmployeeList);
     }
 
-    public void ValidatedDeletedEmployee(String name) {
-        List<WebElement> employee = HomePageEmployeeList.findElements(By.tagName("li"));
+    public void ValidateEmployeeDeleted(String name) {
+        List<WebElement> employee = homePageEmployeeList.findElements(By.tagName("li"));
         for (WebElement li : employee) {
             if (!li.getText().equals(name))
-                WaitForElement(HomePageEmployeeList);
+                waitForElement(homePageEmployeeList);
         }
 
     }
 
-    public void CafeLogout() {
+    public void cafeLogOut() {
 
-        Click(LogoutButton);
+        click(logoutButton);
 
 
     }

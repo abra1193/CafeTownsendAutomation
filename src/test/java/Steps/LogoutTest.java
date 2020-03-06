@@ -14,7 +14,7 @@ public class LogoutTest extends BaseTest {
     @Given("the user is login on the CafeTownsend Portal")
     public void the_user_is_login_on_the_CafeTownsend_Portal(String user, String password) {
 
-        Cafetownsend.loginpage().CafeLogin(user, password);
+        cafetownsend.loginpage().cafeLogIn(user, password);
 
     }
 
@@ -22,8 +22,8 @@ public class LogoutTest extends BaseTest {
     @When("the user clicks on the logout button")
     public void the_user_clicks_on_the_logout_button() {
 
-        Cafetownsend.homePage().WaitForElement(Cafetownsend.homePage().Create);
-        Cafetownsend.homePage().LogoutButton.click();
+        cafetownsend.homePage().waitForElement(cafetownsend.homePage().create);
+        cafetownsend.homePage().logoutButton.click();
 
 
     }
@@ -32,7 +32,7 @@ public class LogoutTest extends BaseTest {
     @Then("the user is logout from the CafeTownsend Portal")
     public void the_user_is_logout_from_the_CafeTownsend_Portal() {
 
-        Cafetownsend.loginpage().WaitForElement(Cafetownsend.loginpage().SubmitButton);
+        cafetownsend.loginpage().waitForElement(cafetownsend.loginpage().submitButton);
     }
 
 

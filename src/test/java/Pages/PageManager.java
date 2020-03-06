@@ -12,18 +12,15 @@ public class PageManager extends BasePage {
     }
 
     public LoginPage loginpage() {
-        LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
-        return loginPage;
+        return PageFactory.initElements(driver, LoginPage.class);
     }
 
     public HomePage homePage() {
-        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        return homePage;
+        return PageFactory.initElements(driver, HomePage.class);
     }
 
     public Employees employees() {
-        Employees employees = PageFactory.initElements(driver, Employees.class);
-        return employees;
+        return PageFactory.initElements(driver, Employees.class);
 
     }
 }

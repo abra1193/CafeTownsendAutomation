@@ -15,47 +15,46 @@ public class CreateEmployeeTest extends BaseTest {
     @Given("the user login on the CafeTownsend portal")
     public void the_user_login_on_the_CafeTownsend_portal(String user, String password) {
 
-        Cafetownsend.loginpage().CafeLogin(user, password);
+        cafetownsend.loginpage().cafeLogIn(user, password);
     }
 
     @Test(priority = 2)
     @When("the user clicks on the Create button")
     public void the_user_clicks_on_the_Create_button() {
 
-        Cafetownsend.WaitForElement(Cafetownsend.homePage().Create);
-        Cafetownsend.homePage().Create.click();
+        cafetownsend.waitForElement(cafetownsend.homePage().create);
+        cafetownsend.homePage().create.click();
     }
 
 
-    @Parameters({"firstname", "lastname", "startdate", "email"})
+    @Parameters({"firstnameCreate", "lastnameCreate", "startdateCreate", "emailCreate"})
     @Test(priority = 3)
     @When("the user types the data to create the new employee")
-    public void the_user_types_the_data_to_create_the_new_employee(String firstname, String lastname, String startdate, String email) {
+    public void the_user_types_the_data_to_create_the_new_employee(String firstnameCreate, String lastnameCreate, String startdateCreate, String emailCreate) {
 
-        Cafetownsend.employees().AddEmployee(firstname, lastname, startdate, email);
+        cafetownsend.employees().addEmployee(firstnameCreate, lastnameCreate, startdateCreate, emailCreate);
     }
 
-    @Parameters({"firstname", "lastname"})
+    @Parameters({"firstnameCreate", "lastnameCreate"})
     @Test(priority = 4)
     @Then("the new employee created is displayed on the employee list")
-    public void the_new_employee_created_is_displayed_on_the_employee_list(String firstname, String lastname) {
+    public void the_new_employee_created_is_displayed_on_the_employee_list(String firstnameCreate, String lastnameCreate) {
 
 
-        Cafetownsend.homePage().ClickEmployeeOnHomePage(firstname + " " + lastname);
-        Cafetownsend.WaitForElement(Cafetownsend.homePage().Edit);
-
+        cafetownsend.homePage().selectEmployee(firstnameCreate + " " + lastnameCreate);
+        cafetownsend.waitForElement(cafetownsend.homePage().edit);
 
     }
 
-    @Parameters({"firstname", "lastname", "startdate", "email"})
+    @Parameters({"firstnameCreate", "lastnameCreate", "startdateCreate", "emailCreate"})
     @Test(priority = 5)
     @Then("the user validates the employee data was inserted correctly on the CafeTownsend portal")
-    public void the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal(String firstname, String lastname, String startdate, String email) {
+    public void the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal(String firstnameCreate, String lastnameCreate, String startdateCreate, String emailCreate)  {
 
-        Cafetownsend.homePage().Edit.click();
-        Cafetownsend.employees().ValidateInsertedEmployee(firstname, lastname, startdate, email);
-        Cafetownsend.WaitForElement(Cafetownsend.homePage().LogoutButton);
-        Cafetownsend.homePage().CafeLogout();
+        cafetownsend.homePage().edit.click();
+        cafetownsend.employees().validateEmployeeInserted(firstnameCreate, lastnameCreate, startdateCreate, emailCreate);
+        cafetownsend.waitForElement(cafetownsend.homePage().logoutButton);
+        cafetownsend.homePage().cafeLogOut();
 
     }
 

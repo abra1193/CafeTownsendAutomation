@@ -17,21 +17,21 @@ public class BaseTest {
 
     protected WebDriver driver;
     protected WebDriverWait wait;
-    PageManager Cafetownsend;
+    PageManager cafetownsend;
 
     @BeforeClass
-    public void InitializeTest() {
+    public void initializeTest() {
 
         System.setProperty("webdriver.chrome.driver", "C:\\Chrome\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        Cafetownsend = new PageManager(driver);
+        cafetownsend = new PageManager(driver);
         wait = new WebDriverWait(driver, 50);
         driver.navigate().to("http://cafetownsend-angular-rails.herokuapp.com/");
     }
 
     @AfterClass
-    public void TeardownTest() {
+    public void teardownTest() {
 
         driver.quit();
     }

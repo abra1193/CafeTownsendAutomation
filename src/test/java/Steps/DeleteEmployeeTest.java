@@ -16,16 +16,19 @@ public class DeleteEmployeeTest extends BaseTest {
     @Given("the user login on the CafeTownsend portal")
     public void the_user_login_on_the_CafeTownsend_portal(String user, String password) {
 
-        Cafetownsend.loginpage().CafeLogin(user, password);
+        cafetownsend.loginpage().cafeLogIn(user, password);
     }
 
-    @Parameters({"newfirstname", "newlastname"})
+    @Parameters({"firstnameDelete", "lastnameDelete", "startdateDelete", "emailDelete"})
     @Test(priority = 2)
     @When("the user selects an employee from the employee list")
-    public void the_user_selects_an_employee_from_the_employee_list(String newfirstname, String newlastname) {
+    public void the_user_selects_an_employee_from_the_employee_list(String firstnameDelete, String lastnameDelete, String startdateDelete, String emailDelete) {
 
-        Cafetownsend.homePage().ClickEmployeeOnHomePage(newfirstname + " " + newlastname);
-        Cafetownsend.homePage().Edit.click();
+        cafetownsend.waitForElement(cafetownsend.homePage().create);
+        cafetownsend.homePage().create.click();
+        cafetownsend.employees().addEmployee(firstnameDelete, lastnameDelete, startdateDelete, emailDelete);
+        cafetownsend.homePage().selectEmployee(firstnameDelete + " " + lastnameDelete);
+        cafetownsend.homePage().edit.click();
 
     }
 
@@ -33,21 +36,20 @@ public class DeleteEmployeeTest extends BaseTest {
     @And("the user clicks on the Delete button")
     public void theUserClicksOnTheDeleteButton() {
 
-        Cafetownsend.WaitForElement(Cafetownsend.employees().Name);
-        Cafetownsend.employees().DeleteButton.click();
+        cafetownsend.waitForElement(cafetownsend.employees().name);
+        cafetownsend.employees().deleteButton.click();
     }
 
-    @Parameters({"newfirstname", "newlastname"})
+    @Parameters({"firstnameDelete", "lastnameDelete"})
     @Test(priority = 4)
     @Then("the user validates the employee was deleted correctly from the CafeTownsend portal employee list")
-    public void theUserValidatesTheEmployeeWasDeletedCorrectlyFromTheCafeTownsendPortalEmployeeList(String newfirstname, String newlastname) {
+    public void theUserValidatesTheEmployeeWasDeletedCorrectlyFromTheCafeTownsendPortalEmployeeList(String firstnameDelete, String lastnameDelete) {
 
         driver.switchTo().alert().accept();
-        driver.switchTo().defaultContent();
-        Cafetownsend.WaitForElement(Cafetownsend.homePage().HomePageEmployeeList);
-        Cafetownsend.homePage().ValidatedDeletedEmployee(newfirstname + " " + newlastname);
-        Cafetownsend.WaitForElement(Cafetownsend.homePage().LogoutButton);
-        Cafetownsend.homePage().CafeLogout();
+        cafetownsend.waitForElement(cafetownsend.homePage().homePageEmployeeList);
+        cafetownsend.homePage().selectEmployee(firstnameDelete + " " + lastnameDelete);
+        cafetownsend.waitForElement(cafetownsend.homePage().logoutButton);
+        cafetownsend.homePage().cafeLogOut();
     }
 }
 

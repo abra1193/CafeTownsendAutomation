@@ -23,32 +23,32 @@ public class BasePage {
     }
 
 
-    public void WaitForElement(WebElement element) {
+    public void waitForElement(WebElement element) {
 
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
 
-    public void Click(WebElement element) {
+    public void click(WebElement element) {
 
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 
-    public void Write(WebElement element, String text) {
-        WaitForElement(element);
+    public void write(WebElement element, String text) {
+        waitForElement(element);
         element.sendKeys(text);
 
     }
 
-    public String Read(WebElement element) {
-        WaitForElement(element);
+    public String read(WebElement element) {
+        waitForElement(element);
         return element.getText();
 
     }
 
-    public void Assert(WebElement element, String expected) {
-        WaitForElement(element);
-        Assert.assertEquals(Read(element), expected);
+    public void assertAreEquals(WebElement element, String expected) {
+        waitForElement(element);
+        Assert.assertEquals(read(element), expected);
     }
 
     }

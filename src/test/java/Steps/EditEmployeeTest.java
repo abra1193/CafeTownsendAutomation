@@ -15,23 +15,27 @@ public class EditEmployeeTest extends BaseTest {
     @Given("the user login on the CafeTownsend portal")
     public void the_user_login_on_the_CafeTownsend_portal(String user, String password) {
 
-        Cafetownsend.loginpage().CafeLogin(user, password);
+        cafetownsend.loginpage().cafeLogIn(user, password);
     }
 
-    @Parameters({"firstname", "lastname"})
+    @Parameters({"firstnameEdit", "lastnameEdit", "startdateEdit", "emailEdit"})
     @Test(priority = 2)
     @When("the user selects an employee from the employee list")
-    public void the_user_selects_an_employee_from_the_employee_list(String firstname, String lastname) {
-        Cafetownsend.WaitForElement(Cafetownsend.homePage().HomePageEmployeeList);
-        Cafetownsend.homePage().ClickEmployeeOnHomePage(firstname + " " + lastname);
+    public void the_user_selects_an_employee_from_the_employee_list(String firstnameEdit, String lastnameEdit, String startdateEdit, String emailEdit) {
+
+        cafetownsend.waitForElement(cafetownsend.homePage().create);
+        cafetownsend.homePage().create.click();
+        cafetownsend.employees().addEmployee(firstnameEdit, lastnameEdit, startdateEdit, emailEdit);
+        cafetownsend.waitForElement(cafetownsend.homePage().homePageEmployeeList);
+        cafetownsend.homePage().selectEmployee(firstnameEdit + " " + lastnameEdit);
     }
 
     @Test(priority = 3)
     @And("the user clicks on the Edit button")
     public void the_user_clicks_on_the_Edit_button() {
-        Cafetownsend.WaitForElement(Cafetownsend.homePage().Edit);
-        Cafetownsend.homePage().Edit.click();
-        Cafetownsend.WaitForElement(Cafetownsend.employees().BackButton);
+
+        cafetownsend.waitForElement(cafetownsend.homePage().edit);
+        cafetownsend.homePage().edit.click();
 
     }
 
@@ -40,8 +44,9 @@ public class EditEmployeeTest extends BaseTest {
     @When("the user edits an employee")
     public void the_user_edits_an_employee(String newfirstname, String newlastname, String newstardate, String newemail) {
 
-        Cafetownsend.employees().EditEmployee(newfirstname, newlastname, newstardate, newemail);
-        Cafetownsend.homePage().ClickEmployeeOnHomePage(newfirstname + " " + newlastname);
+        cafetownsend.employees().editEmployee(newfirstname, newlastname, newstardate, newemail);
+        cafetownsend.homePage().waitForElement(cafetownsend.homePage().homePageEmployeeList);
+        cafetownsend.homePage().selectEmployee(newfirstname + " " + newlastname);
 
     }
 
@@ -50,10 +55,10 @@ public class EditEmployeeTest extends BaseTest {
     @Then("the user validates the employee data was edited correctly on the CafeTownsend portal")
     public void the_user_validates_the_employee_data_was_edited_correctly_on_the_CafeTownsend_portal(String newfirstname, String newlastname, String newstardate, String newemail) {
 
-        Cafetownsend.homePage().Edit.click();
-        Cafetownsend.employees().ValidateInsertedEmployee(newfirstname, newlastname, newstardate, newemail);
-        Cafetownsend.homePage().CafeLogout();
-        Cafetownsend.WaitForElement(Cafetownsend.loginpage().SubmitButton);
+        cafetownsend.homePage().edit.click();
+        cafetownsend.employees().validateEmployeeInserted(newfirstname, newlastname, newstardate, newemail);
+        cafetownsend.homePage().cafeLogOut();
+        cafetownsend.waitForElement(cafetownsend.loginpage().submitButton);
 
 
     }
