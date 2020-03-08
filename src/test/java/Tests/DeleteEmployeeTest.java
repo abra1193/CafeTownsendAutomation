@@ -16,7 +16,7 @@ public class DeleteEmployeeTest extends BaseTest {
     @Given("the user login on the CafeTownsend portal")
     public void the_user_login_on_the_CafeTownsend_portal(String user, String password) {
 
-        cafeTownSend.loginPage().cafeLogIn(user, password);
+        cafetownsend.loginpage().cafeLogIn(user, password);
     }
 
     @Parameters({"firstnameDelete", "lastnameDelete", "startdateDelete", "emailDelete"})
@@ -46,10 +46,10 @@ public class DeleteEmployeeTest extends BaseTest {
     public void theUserValidatesTheEmployeeWasDeletedCorrectlyFromTheCafeTownsendPortalEmployeeList(String firstnameDelete, String lastnameDelete) {
 
         driver.switchTo().alert().accept();
-        cafetownsend.waitForElement(cafetownsend.homePage().homePageEmployeeList);
-        cafetownsend.homePage().validateEmployeeDeleted(String.format("%s %s", firstnameDelete, lastnameDelete));
-        cafetownsend.waitForElement(cafetownsend.homePage().logoutButton);
+        cafetownsend.waitForElement(cafetownsend.homePage().employeeList);
+        cafetownsend.homePage().validateDeletedEmployee(String.format("%s %s", firstnameDelete, lastnameDelete));
         cafetownsend.homePage().cafeLogOut();
+        cafetownsend.waitForElement(cafetownsend.loginpage().submitButton);
     }
 }
 

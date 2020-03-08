@@ -7,13 +7,45 @@
     <groupId>groupId</groupId>
     <artifactId>CafeTownsendAutomation</artifactId>
     <version>1.0-SNAPSHOT</version>
+  <build>
+      <plugins>
+          <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+              <configuration>
+                  <source>1.13</source>
+                  <target>1.13</target>
+              </configuration>
+          </plugin>
+          <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M4</version>
+              <configuration>
+              <suiteXmlFiles>
+                  <suiteXmlFile>src/test/java/Resources/testng.xml</suiteXmlFile>
+              </suiteXmlFiles>
+              </configuration>
+          </plugin>
+      </plugins>
+  </build>
         <dependencies>
-        <dependency>
+            <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>5.4.1</version>
         </dependency>
-        <dependency>
+            <dependency>
+                <groupId>org.apache.maven.surefire</groupId>
+                <artifactId>surefire-booter</artifactId>
+                <version>3.0.0-M4</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aventstack</groupId>
+                <artifactId>extentreports</artifactId>
+                <version>4.1.3</version>
+            </dependency>
+            <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>3.141.59</version>
@@ -41,9 +73,5 @@
                 <version>RELEASE</version>
                 <scope>compile</scope>
             </dependency>
-
-
         </dependencies>
-
-
 </project>

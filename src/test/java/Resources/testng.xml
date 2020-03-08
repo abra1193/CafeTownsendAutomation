@@ -15,6 +15,13 @@
             <class name="Tests.LogoutTest"/>
         </classes>
     </test>
+    <test name="Invalid login test">
+        <parameter name="userinvalid" value="Anakin"/>
+        <parameter name="passwordinvalid" value="Skywalker"/>
+        <classes>
+            <class name="Tests.InvalidLoginTest"/>
+        </classes>
+    </test>
     <test name="Create Employee Test">
         <parameter name="user" value="Luke"/>
         <parameter name="password" value="Skywalker"/>
@@ -53,4 +60,3 @@
         </classes>
     </test>
 </suite>
-

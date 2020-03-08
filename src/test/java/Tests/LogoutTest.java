@@ -23,7 +23,7 @@ public class LogoutTest extends BaseTest {
     public void the_user_clicks_on_the_logout_button() {
 
         cafetownsend.homePage().waitForElement(cafetownsend.homePage().create);
-        cafetownsend.homePage().logoutButton.click();
+        cafetownsend.homePage().cafeLogOut();
 
 
     }

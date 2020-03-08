@@ -29,26 +29,28 @@ public class HomePage extends BasePage {
     @FindBy(how = How.XPATH, using = "//*[contains(text(),'Logout')]")
     public WebElement logoutButton;
 
-    @FindBy(how = How.XPATH, using = "//*[@id='employee-list-container']/ul[@id='employee-list']")
-    public WebElement homePageEmployeeList;
+    @FindBy(how = How.XPATH, using = "//*[@id='employee-list-container']")
+    public WebElement employeeList;
+
+    @FindBy(how = How.ID, using = "greetings")
+    public WebElement greetingsLogin;
 
 
     public void selectEmployee(String name) {
-        waitForElement(homePageEmployeeList);
-        click(homePageEmployeeList);
-        List<WebElement> employee = homePageEmployeeList.findElements(By.tagName("li"));
+        waitForElement(employeeList);
+        click(employeeList);
+        List<WebElement> employee = employeeList.findElements(By.tagName("li"));
         for (WebElement li : employee)
             if (li.getText().equals(name))
                 click(li);
-        waitForElement(homePageEmployeeList);
-
+        waitForElement(employeeList);
     }
 
-    public void validateEmployeeDeleted(String name) {
-        List<WebElement> employee = homePageEmployeeList.findElements(By.tagName("li"));
+    public void validateDeletedEmployee(String name) {
+        List<WebElement> employee = employeeList.findElements(By.tagName("li"));
         for (WebElement li : employee) {
             if (!li.getText().equals(name))
-                waitForElement(homePageEmployeeList);
+                waitForElement(employeeList);
         }
 
     }

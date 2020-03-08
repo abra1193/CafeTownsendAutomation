@@ -9,9 +9,9 @@ import org.openqa.selenium.support.How;
 
 import java.util.List;
 
-public class Employees extends BasePage {
+public class EmployeesPage extends BasePage {
 
-    public Employees(WebDriver driver) {
+    public EmployeesPage(WebDriver driver) {
 
         super(driver);
     }
@@ -57,21 +57,6 @@ public class Employees extends BasePage {
         write(email,
                 employeeEmail);
         addButton.click();
-
-    }
-
-    public void validateEmployeeInserted(String employeename, String employeeLastName, String employeeStartDate, String employeeEmail) {
-        waitForElement(employeeForm);
-        List<WebElement> employeefields = employeeForm.findElements(By.tagName("input"));
-        for (WebElement label : employeefields)
-            if (label.getAttribute("value").equals((employeename)) || label.getAttribute("value").equals((employeeLastName))
-                    || label.getAttribute("value").equals((employeeStartDate)) || label.getAttribute("value").equals((employeeStartDate)) || label.getAttribute("value").equals((employeeEmail))) {
-                System.out.printf("Employee %s %s data was inserted correctly%n", employeename, employeeLastName);
-                waitForElement(employeeForm);
-                click(backButton);
-            } else
-                System.out.printf("Employee %s %s data was not inserted correctly%n", employeename, employeeLastName);
-
     }
 
     public void editEmployee(String employeeName, String employeeLastName, String employeeStartDate, String employeeEmail) {

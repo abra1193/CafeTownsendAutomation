@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -15,7 +16,7 @@ public class EditEmployeeTest extends BaseTest {
     @Given("the user login on the CafeTownsend portal")
     public void the_user_login_on_the_CafeTownsend_portal(String user, String password) {
 
-        cafetownsend.loginPage().cafeLogIn(user, password);
+        cafetownsend.loginpage().cafeLogIn(user, password);
     }
 
     @Parameters({"firstnameEdit", "lastnameEdit", "startdateEdit", "emailEdit"})
@@ -26,7 +27,6 @@ public class EditEmployeeTest extends BaseTest {
         cafetownsend.waitForElement(cafetownsend.homePage().create);
         cafetownsend.homePage().create.click();
         cafetownsend.employees().addEmployee(firstnameEdit, lastnameEdit, startdateEdit, emailEdit);
-        cafetownsend.waitForElement(cafetownsend.homePage().homePageEmployeeList);
         cafetownsend.homePage().selectEmployee(String.format("%s %s", firstnameEdit, lastnameEdit));
     }
 
@@ -36,6 +36,7 @@ public class EditEmployeeTest extends BaseTest {
 
         cafetownsend.waitForElement(cafetownsend.homePage().edit);
         cafetownsend.homePage().edit.click();
+        cafetownsend.waitForElement(cafetownsend.employees().employeeForm);
 
     }
 
@@ -45,7 +46,6 @@ public class EditEmployeeTest extends BaseTest {
     public void the_user_edits_an_employee(String newfirstname, String newlastname, String newstardate, String newemail) {
 
         cafetownsend.employees().editEmployee(newfirstname, newlastname, newstardate, newemail);
-        cafetownsend.homePage().waitForElement(cafetownsend.homePage().homePageEmployeeList);
         cafetownsend.homePage().selectEmployee(String.format("%s %s", newfirstname, newlastname));
 
     }
@@ -56,9 +56,12 @@ public class EditEmployeeTest extends BaseTest {
     public void the_user_validates_the_employee_data_was_edited_correctly_on_the_CafeTownsend_portal(String newfirstname, String newlastname, String newstardate, String newemail) {
 
         cafetownsend.homePage().edit.click();
-        cafetownsend.employees().validateEmployeeInserted(newfirstname, newlastname, newstardate, newemail);
+        Assert.assertEquals(cafetownsend.employees().name.getAttribute("value"),newfirstname);
+        Assert.assertEquals(cafetownsend.employees().lastName.getAttribute("value"),newlastname);
+        Assert.assertEquals(cafetownsend.employees().startDate.getAttribute("value"),newstardate);
+        Assert.assertEquals(cafetownsend.employees().email.getAttribute("value"),newemail);
         cafetownsend.homePage().cafeLogOut();
-        cafetownsend.waitForElement(cafetownsend.loginPage().submitButton);
+        cafetownsend.waitForElement(cafetownsend.loginpage().submitButton);
 
 
     }
