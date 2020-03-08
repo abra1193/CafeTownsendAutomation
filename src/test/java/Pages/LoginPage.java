@@ -23,10 +23,10 @@ public class LoginPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//*[@id='login-form']/fieldset/button")
     public WebElement submitButton;
 
-    @FindBy(how = How.XPATH,using = "//*[contains(text(),'Invalid username or password!')]")
+    @FindBy(how = How.XPATH, using = "//*[contains(text(),'Invalid username or password!')]")
     public WebElement invalidLoginMessage;
 
-    public void cafeLogIn(String user,String pass) {
+    public void cafeLogIn(String user, String pass) {
         waitForElement(submitButton);
         write(username, user);
         write(password, pass);

@@ -25,7 +25,6 @@ public class LogoutTest extends BaseTest {
         cafetownsend.homePage().waitForElement(cafetownsend.homePage().create);
         cafetownsend.homePage().cafeLogOut();
 
-
     }
 
     @Test(priority = 3)

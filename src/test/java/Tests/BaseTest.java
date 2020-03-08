@@ -12,9 +12,8 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
 
-    protected WebDriver driver;
+    public WebDriver driver;
     PageGenerator cafetownsend;
-    protected WebDriverWait wait;
 
     @BeforeClass
     public void initializeTest() {

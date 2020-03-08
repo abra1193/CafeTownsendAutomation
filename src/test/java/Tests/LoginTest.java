@@ -1,13 +1,11 @@
 package Tests;
 
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 
 public class LoginTest extends BaseTest {
 

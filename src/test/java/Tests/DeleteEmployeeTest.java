@@ -7,7 +7,7 @@ import io.cucumber.java.en.When;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-@Test
+
 public class DeleteEmployeeTest extends BaseTest {
 
 
