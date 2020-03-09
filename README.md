@@ -30,29 +30,35 @@ Since this I decided to create parameterized test and those parameters are store
 
 **The following test case are cover by the automation test suite:**
 
-* **Verify that the user can create an employee on the portal(CreateEmployeeTest.java).**
 
-**Expected result:** The employee is displayed on the employee list with the same data that was created.
+*  **Verify that the user can create an employee on the portal(CreateEmployeeTest.java).**
 
-* **Verify that the user can edit an employee on the portal(EditEmployeeTest.java).**
+   **Expected result:** The employee is displayed on the employee list with the same data that was created.
+  
 
-**Expected result:** The employee is displayed on the employee list with the same data that was edited.
+*  **Verify that the user can edit an employee on the portal(EditEmployeeTest.java).**
+
+   **Expected result:** The employee is displayed on the employee list with the same data that was edited.
+  
 
 * **Verify that the user can delete an employee on the portal(DeleteEmployeeTest.java).**
 
-**Expected result:** The employee is not longer displayed on the employee list.
+  **Expected result:** The employee is not longer displayed on the employee list.
+  
 
 * **Verify that the user can login on the portal(LoginTest.java).**
 
-**Expected result:** Login greeting message is displayed on the home screen.
+  **Expected result:** Login greeting message is displayed on the home screen.
+  
 
 * **Verify that the user can logout of the portal(LogoutTest.java).**
 
-**Expected result:** After the user is logout of the portal,the login page is displayed.
+  **Expected result:** After the user is logout of the portal,the login page is displayed.
+  
 
 * **Verify when the user enters invalid credentials on the login page(InvalidLoginTest.java).**
 
-**Expected result:** The portal display a warning message on the login page.
+  **Expected result:** The portal display a warning message on the login page.
 
 ## Pre Requisites
 
