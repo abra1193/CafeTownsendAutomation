@@ -8,9 +8,3 @@ Feature: CafeTownsend EditEmployee
     And the user clicks on the Edit button
     And the user edits an employee
     Then the user validates the employee data was edited correctly on the CafeTownsend portal
-
-
-
-
-
-

@@ -1,5 +1,5 @@
 /.idea/
 / target/site/cucumber-pretty/
 /out/production/CafeTownsendAutomation/META-INF/
-/target/
 /CafeTownsendAutomation.iml
+/allure-results

@@ -1,9 +1,9 @@
 package Tests;
 
 import Pages.PageGenerator;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -18,7 +18,7 @@ public class BaseTest {
     @BeforeClass
     public void initializeTest() {
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Chrome\\chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         cafetownsend = new PageGenerator(driver);

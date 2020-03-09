@@ -36,11 +36,7 @@ public class BasePage {
         element.sendKeys(text);
 
     }
-/*
-    public String read(WebElement element) {
-        waitForElement(element);
-        return element.getText();
-        }*/
+
 
 }
 

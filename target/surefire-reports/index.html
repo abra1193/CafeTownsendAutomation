@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-CafetownSend_Tests" class="navigator-link">
+              <span class="suite-name border-passed">CafetownSend Tests</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-CafetownSend_Tests" class="navigator-link ">
+                    <span>C:\Users\AbrahamE\IdeaProjects\CafeTownsendAutomation\src\test\java\Resources\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-CafetownSend_Tests" class="navigator-link ">
+                    <span class="test-stats">6 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-CafetownSend_Tests" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-CafetownSend_Tests" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-CafetownSend_Tests" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-CafetownSend_Tests" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-CafetownSend_Tests" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">23 methods,   23 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-CafetownSend_Tests" class="hide-methods passed suite-CafetownSend_Tests"> (hide)</a> <!-- hide-methods passed suite-CafetownSend_Tests -->
+                      <a href="#" panel-name="suite-CafetownSend_Tests" class="show-methods passed suite-CafetownSend_Tests"> (show)</a> <!-- show-methods passed suite-CafetownSend_Tests -->
+                    </span>
+                    <div class="method-list-content passed suite-CafetownSend_Tests">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.CreateEmployeeTest" class="method navigator-link" hash-for-method="The_user_login_on_the_CafeTownsend_portal(Luke, Skywalker)">The_user_login_on_the_CafeTownsend_portal(Luke, Skywalker)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.InvalidLoginTest" class="method navigator-link" hash-for-method="thePortalDisplayAInvalidCredentialsWarningOnTheLoginPage">thePortalDisplayAInvalidCredentialsWarningOnTheLoginPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.DeleteEmployeeTest" class="method navigator-link" hash-for-method="theUserClicksOnTheDeleteButton">theUserClicksOnTheDeleteButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.LoginTest" class="method navigator-link" hash-for-method="theUserLoginOnTheCafeTownsendPortalSuccessfully">theUserLoginOnTheCafeTownsendPortalSuccessfully</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.LoginTest" class="method navigator-link" hash-for-method="theUserNavigatesToTheLoginPage">theUserNavigatesToTheLoginPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.InvalidLoginTest" class="method navigator-link" hash-for-method="theUserNavigatesToTheLoginPage">theUserNavigatesToTheLoginPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.InvalidLoginTest" class="method navigator-link" hash-for-method="theUserTypesAWrongCredentialsOnTheLoginPage(Anakin, Skywalker)">theUserTypesAWrongCredentialsOnTheLoginPage(Anakin, Skywalker)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.LoginTest" class="method navigator-link" hash-for-method="theUserTypesTheCredentialsProvidedOnThePortal(Luke, Skywalker)">theUserTypesTheCredentialsProvidedOnThePortal(Luke, Skywalker)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.DeleteEmployeeTest" class="method navigator-link" hash-for-method="theUserValidatesTheEmployeeWasDeletedCorrectlyFromTheCafeTownsendPortalEmployeeList(DELETE, USER)">theUserValidatesTheEmployeeWasDeletedCorrectlyFromTheCafeTownsendPortalEmployeeList(DELETE, USER)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.CreateEmployeeTest" class="method navigator-link" hash-for-method="the_new_employee_created_is_displayed_on_the_employee_list(CREATE, USER)">the_new_employee_created_is_displayed_on_the_employee_list(CREATE, USER)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.CreateEmployeeTest" class="method navigator-link" hash-for-method="the_user_clicks_on_the_Create_button">the_user_clicks_on_the_Create_button</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.EditEmployeeTest" class="method navigator-link" hash-for-method="the_user_clicks_on_the_Edit_button">the_user_clicks_on_the_Edit_button</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.LogoutTest" class="method navigator-link" hash-for-method="the_user_clicks_on_the_logout_button">the_user_clicks_on_the_logout_button</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.EditEmployeeTest" class="method navigator-link" hash-for-method="the_user_edits_an_employee(NEWNAME, NEWLASTNAME, 2020-01-01, NEWNAME@test.com)">the_user_edits_an_employee(NEWNAME, NEWLASTNAME, 2020-01-01, NEWNAME@test.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.LogoutTest" class="method navigator-link" hash-for-method="the_user_is_login_on_the_CafeTownsend_Portal(Luke, Skywalker)">the_user_is_login_on_the_CafeTownsend_Portal(Luke, Skywalker)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.LogoutTest" class="method navigator-link" hash-for-method="the_user_is_logout_from_the_CafeTownsend_Portal">the_user_is_logout_from_the_CafeTownsend_Portal</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.EditEmployeeTest" class="method navigator-link" hash-for-method="the_user_login_on_the_CafeTownsend_portal(Luke, Skywalker)">the_user_login_on_the_CafeTownsend_portal(Luke, Skywalker)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.DeleteEmployeeTest" class="method navigator-link" hash-for-method="the_user_login_on_the_CafeTownsend_portal(Luke, Skywalker)">the_user_login_on_the_CafeTownsend_portal(Luke, Skywalker)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.EditEmployeeTest" class="method navigator-link" hash-for-method="the_user_selects_an_employee_from_the_employee_list(EDIT, USER, 2020-01-01, EDITUSER@test.com)">the_user_selects_an_employee_from_the_employee_list(EDIT, USER, 2020-01-01, EDITUSER@test.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.DeleteEmployeeTest" class="method navigator-link" hash-for-method="the_user_selects_an_employee_from_the_employee_list(DELETE, USER, 2020-01-01, DELETEUSER@test.com)">the_user_selects_an_employee_from_the_employee_list(DELETE, USER, 2020-01-01, DELETEUSER@test.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.CreateEmployeeTest" class="method navigator-link" hash-for-method="the_user_types_the_data_to_create_the_new_employee(CREATE, USER, 2020-01-01, CREATEUSER@test.com)">the_user_types_the_data_to_create_the_new_employee(CREATE, USER, 2020-01-01, CREATEUSER@test.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.EditEmployeeTest" class="method navigator-link" hash-for-method="the_user_validates_the_employee_data_was_edited_correctly_on_the_CafeTownsend_portal(NEWNAME, NEWLASTNAME, 2020-01-01, NEWNAME@test.com)">the_user_validates_the_employee_data_was_edited_correctly_on_the_CafeTownsend_portal(NEWNAME, NEWLASTNAME, 2020-01-01, NEWNAME@test.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CafetownSend_Tests" title="Tests.CreateEmployeeTest" class="method navigator-link" hash-for-method="the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal(CREATE, USER, 2020-01-01, CREATEUSER@test.com)">the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal(CREATE, USER, 2020-01-01, CREATEUSER@test.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-CafetownSend_Tests -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-CafetownSend_Tests" class="panel CafetownSend_Tests">
+          <div class="suite-CafetownSend_Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Tests.EditEmployeeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="the_user_clicks_on_the_Edit_button">
+                  </a> <!-- the_user_clicks_on_the_Edit_button -->
+                  <span class="method-name">the_user_clicks_on_the_Edit_button</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="the_user_edits_an_employee(NEWNAME, NEWLASTNAME, 2020-01-01, NEWNAME@test.com)">
+                  </a> <!-- the_user_edits_an_employee(NEWNAME, NEWLASTNAME, 2020-01-01, NEWNAME@test.com) -->
+                  <span class="method-name">the_user_edits_an_employee</span>
+                  <span class="parameters">(NEWNAME, NEWLASTNAME, 2020-01-01, NEWNAME@test.com)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="the_user_login_on_the_CafeTownsend_portal(Luke, Skywalker)">
+                  </a> <!-- the_user_login_on_the_CafeTownsend_portal(Luke, Skywalker) -->
+                  <span class="method-name">the_user_login_on_the_CafeTownsend_portal</span>
+                  <span class="parameters">(Luke, Skywalker)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="the_user_selects_an_employee_from_the_employee_list(EDIT, USER, 2020-01-01, EDITUSER@test.com)">
+                  </a> <!-- the_user_selects_an_employee_from_the_employee_list(EDIT, USER, 2020-01-01, EDITUSER@test.com) -->
+                  <span class="method-name">the_user_selects_an_employee_from_the_employee_list</span>
+                  <span class="parameters">(EDIT, USER, 2020-01-01, EDITUSER@test.com)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="the_user_validates_the_employee_data_was_edited_correctly_on_the_CafeTownsend_portal(NEWNAME, NEWLASTNAME, 2020-01-01, NEWNAME@test.com)">
+                  </a> <!-- the_user_validates_the_employee_data_was_edited_correctly_on_the_CafeTownsend_portal(NEWNAME, NEWLASTNAME, 2020-01-01, NEWNAME@test.com) -->
+                  <span class="method-name">the_user_validates_the_employee_data_was_edited_correctly_on_the_CafeTownsend_portal</span>
+                  <span class="parameters">(NEWNAME, NEWLASTNAME, 2020-01-01, NEWNAME@test.com)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CafetownSend_Tests-class-passed -->
+          <div class="suite-CafetownSend_Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Tests.DeleteEmployeeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="theUserClicksOnTheDeleteButton">
+                  </a> <!-- theUserClicksOnTheDeleteButton -->
+                  <span class="method-name">theUserClicksOnTheDeleteButton</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="theUserValidatesTheEmployeeWasDeletedCorrectlyFromTheCafeTownsendPortalEmployeeList(DELETE, USER)">
+                  </a> <!-- theUserValidatesTheEmployeeWasDeletedCorrectlyFromTheCafeTownsendPortalEmployeeList(DELETE, USER) -->
+                  <span class="method-name">theUserValidatesTheEmployeeWasDeletedCorrectlyFromTheCafeTownsendPortalEmployeeList</span>
+                  <span class="parameters">(DELETE, USER)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="the_user_login_on_the_CafeTownsend_portal(Luke, Skywalker)">
+                  </a> <!-- the_user_login_on_the_CafeTownsend_portal(Luke, Skywalker) -->
+                  <span class="method-name">the_user_login_on_the_CafeTownsend_portal</span>
+                  <span class="parameters">(Luke, Skywalker)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="the_user_selects_an_employee_from_the_employee_list(DELETE, USER, 2020-01-01, DELETEUSER@test.com)">
+                  </a> <!-- the_user_selects_an_employee_from_the_employee_list(DELETE, USER, 2020-01-01, DELETEUSER@test.com) -->
+                  <span class="method-name">the_user_selects_an_employee_from_the_employee_list</span>
+                  <span class="parameters">(DELETE, USER, 2020-01-01, DELETEUSER@test.com)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CafetownSend_Tests-class-passed -->
+          <div class="suite-CafetownSend_Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Tests.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="theUserLoginOnTheCafeTownsendPortalSuccessfully">
+                  </a> <!-- theUserLoginOnTheCafeTownsendPortalSuccessfully -->
+                  <span class="method-name">theUserLoginOnTheCafeTownsendPortalSuccessfully</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="theUserNavigatesToTheLoginPage">
+                  </a> <!-- theUserNavigatesToTheLoginPage -->
+                  <span class="method-name">theUserNavigatesToTheLoginPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="theUserTypesTheCredentialsProvidedOnThePortal(Luke, Skywalker)">
+                  </a> <!-- theUserTypesTheCredentialsProvidedOnThePortal(Luke, Skywalker) -->
+                  <span class="method-name">theUserTypesTheCredentialsProvidedOnThePortal</span>
+                  <span class="parameters">(Luke, Skywalker)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CafetownSend_Tests-class-passed -->
+          <div class="suite-CafetownSend_Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Tests.CreateEmployeeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="The_user_login_on_the_CafeTownsend_portal(Luke, Skywalker)">
+                  </a> <!-- The_user_login_on_the_CafeTownsend_portal(Luke, Skywalker) -->
+                  <span class="method-name">The_user_login_on_the_CafeTownsend_portal</span>
+                  <span class="parameters">(Luke, Skywalker)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="the_new_employee_created_is_displayed_on_the_employee_list(CREATE, USER)">
+                  </a> <!-- the_new_employee_created_is_displayed_on_the_employee_list(CREATE, USER) -->
+                  <span class="method-name">the_new_employee_created_is_displayed_on_the_employee_list</span>
+                  <span class="parameters">(CREATE, USER)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="the_user_clicks_on_the_Create_button">
+                  </a> <!-- the_user_clicks_on_the_Create_button -->
+                  <span class="method-name">the_user_clicks_on_the_Create_button</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="the_user_types_the_data_to_create_the_new_employee(CREATE, USER, 2020-01-01, CREATEUSER@test.com)">
+                  </a> <!-- the_user_types_the_data_to_create_the_new_employee(CREATE, USER, 2020-01-01, CREATEUSER@test.com) -->
+                  <span class="method-name">the_user_types_the_data_to_create_the_new_employee</span>
+                  <span class="parameters">(CREATE, USER, 2020-01-01, CREATEUSER@test.com)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal(CREATE, USER, 2020-01-01, CREATEUSER@test.com)">
+                  </a> <!-- the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal(CREATE, USER, 2020-01-01, CREATEUSER@test.com) -->
+                  <span class="method-name">the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal</span>
+                  <span class="parameters">(CREATE, USER, 2020-01-01, CREATEUSER@test.com)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CafetownSend_Tests-class-passed -->
+          <div class="suite-CafetownSend_Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Tests.InvalidLoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="thePortalDisplayAInvalidCredentialsWarningOnTheLoginPage">
+                  </a> <!-- thePortalDisplayAInvalidCredentialsWarningOnTheLoginPage -->
+                  <span class="method-name">thePortalDisplayAInvalidCredentialsWarningOnTheLoginPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="theUserNavigatesToTheLoginPage">
+                  </a> <!-- theUserNavigatesToTheLoginPage -->
+                  <span class="method-name">theUserNavigatesToTheLoginPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="theUserTypesAWrongCredentialsOnTheLoginPage(Anakin, Skywalker)">
+                  </a> <!-- theUserTypesAWrongCredentialsOnTheLoginPage(Anakin, Skywalker) -->
+                  <span class="method-name">theUserTypesAWrongCredentialsOnTheLoginPage</span>
+                  <span class="parameters">(Anakin, Skywalker)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CafetownSend_Tests-class-passed -->
+          <div class="suite-CafetownSend_Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Tests.LogoutTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="the_user_clicks_on_the_logout_button">
+                  </a> <!-- the_user_clicks_on_the_logout_button -->
+                  <span class="method-name">the_user_clicks_on_the_logout_button</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="the_user_is_login_on_the_CafeTownsend_Portal(Luke, Skywalker)">
+                  </a> <!-- the_user_is_login_on_the_CafeTownsend_Portal(Luke, Skywalker) -->
+                  <span class="method-name">the_user_is_login_on_the_CafeTownsend_Portal</span>
+                  <span class="parameters">(Luke, Skywalker)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="the_user_is_logout_from_the_CafeTownsend_Portal">
+                  </a> <!-- the_user_is_logout_from_the_CafeTownsend_Portal -->
+                  <span class="method-name">the_user_is_logout_from_the_CafeTownsend_Portal</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CafetownSend_Tests-class-passed -->
+        </div> <!-- panel CafetownSend_Tests -->
+        <div panel-name="test-xml-CafetownSend_Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\AbrahamE\IdeaProjects\CafeTownsendAutomation\src\test\java\Resources\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;CafetownSend Tests&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Login Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;Skywalker&quot;/&gt;
+    &lt;parameter name=&quot;user&quot; value=&quot;Luke&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Tests.LoginTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Login Test --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Logout Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;Skywalker&quot;/&gt;
+    &lt;parameter name=&quot;user&quot; value=&quot;Luke&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Tests.LogoutTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Logout Test --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Invalid login test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;userinvalid&quot; value=&quot;Anakin&quot;/&gt;
+    &lt;parameter name=&quot;passwordinvalid&quot; value=&quot;Skywalker&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Tests.InvalidLoginTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Invalid login test --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Create Employee Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;firstnameCreate&quot; value=&quot;CREATE&quot;/&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;Skywalker&quot;/&gt;
+    &lt;parameter name=&quot;startdateCreate&quot; value=&quot;2020-01-01&quot;/&gt;
+    &lt;parameter name=&quot;lastnameCreate&quot; value=&quot;USER&quot;/&gt;
+    &lt;parameter name=&quot;emailCreate&quot; value=&quot;CREATEUSER@test.com&quot;/&gt;
+    &lt;parameter name=&quot;user&quot; value=&quot;Luke&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Tests.CreateEmployeeTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Create Employee Test --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Edit Employee Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;Skywalker&quot;/&gt;
+    &lt;parameter name=&quot;firstnameEdit&quot; value=&quot;EDIT&quot;/&gt;
+    &lt;parameter name=&quot;newemail&quot; value=&quot;NEWNAME@test.com&quot;/&gt;
+    &lt;parameter name=&quot;startdateEdit&quot; value=&quot;2020-01-01&quot;/&gt;
+    &lt;parameter name=&quot;newfirstname&quot; value=&quot;NEWNAME&quot;/&gt;
+    &lt;parameter name=&quot;lastnameEdit&quot; value=&quot;USER&quot;/&gt;
+    &lt;parameter name=&quot;user&quot; value=&quot;Luke&quot;/&gt;
+    &lt;parameter name=&quot;emailEdit&quot; value=&quot;EDITUSER@test.com&quot;/&gt;
+    &lt;parameter name=&quot;newlastname&quot; value=&quot;NEWLASTNAME&quot;/&gt;
+    &lt;parameter name=&quot;newstartdate&quot; value=&quot;2020-01-01&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Tests.EditEmployeeTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Edit Employee Test --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Delete Employee Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;Skywalker&quot;/&gt;
+    &lt;parameter name=&quot;startdateDelete&quot; value=&quot;2020-01-01&quot;/&gt;
+    &lt;parameter name=&quot;emailDelete&quot; value=&quot;DELETEUSER@test.com&quot;/&gt;
+    &lt;parameter name=&quot;user&quot; value=&quot;Luke&quot;/&gt;
+    &lt;parameter name=&quot;firstnameDelete&quot; value=&quot;DELETE&quot;/&gt;
+    &lt;parameter name=&quot;lastnameDelete&quot; value=&quot;USER&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;Tests.DeleteEmployeeTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Delete Employee Test --&gt;
+&lt;/suite&gt; &lt;!-- CafetownSend Tests --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-CafetownSend_Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for CafetownSend Tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Login Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Logout Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Invalid login test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Create Employee Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Edit Employee Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Delete Employee Test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-CafetownSend_Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for CafetownSend Tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-CafetownSend_Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for CafetownSend Tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_CafetownSend_Tests');
+function tableData_CafetownSend_Tests() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(23);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'theUserValidatesTheEmployeeWasDeletedCorrectlyFromTheCafeTownsendPortalEmployeeList')
+data.setCell(0, 2, 'Tests.DeleteEmployeeTest')
+data.setCell(0, 3, 10109);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'the_new_employee_created_is_displayed_on_the_employee_list')
+data.setCell(1, 2, 'Tests.CreateEmployeeTest')
+data.setCell(1, 3, 8462);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'the_user_edits_an_employee')
+data.setCell(2, 2, 'Tests.EditEmployeeTest')
+data.setCell(2, 3, 7594);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'the_user_selects_an_employee_from_the_employee_list')
+data.setCell(3, 2, 'Tests.EditEmployeeTest')
+data.setCell(3, 3, 7321);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'the_user_selects_an_employee_from_the_employee_list')
+data.setCell(4, 2, 'Tests.DeleteEmployeeTest')
+data.setCell(4, 3, 7025);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'the_user_login_on_the_CafeTownsend_portal')
+data.setCell(5, 2, 'Tests.EditEmployeeTest')
+data.setCell(5, 3, 1199);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'the_user_is_login_on_the_CafeTownsend_Portal')
+data.setCell(6, 2, 'Tests.LogoutTest')
+data.setCell(6, 3, 1075);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'the_user_login_on_the_CafeTownsend_portal')
+data.setCell(7, 2, 'Tests.DeleteEmployeeTest')
+data.setCell(7, 3, 1075);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'theUserNavigatesToTheLoginPage')
+data.setCell(8, 2, 'Tests.InvalidLoginTest')
+data.setCell(8, 3, 1058);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'The_user_login_on_the_CafeTownsend_portal')
+data.setCell(9, 2, 'Tests.CreateEmployeeTest')
+data.setCell(9, 3, 1025);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'theUserClicksOnTheDeleteButton')
+data.setCell(10, 2, 'Tests.DeleteEmployeeTest')
+data.setCell(10, 3, 1005);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'the_user_types_the_data_to_create_the_new_employee')
+data.setCell(11, 2, 'Tests.CreateEmployeeTest')
+data.setCell(11, 3, 944);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'theUserNavigatesToTheLoginPage')
+data.setCell(12, 2, 'Tests.LoginTest')
+data.setCell(12, 3, 889);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal')
+data.setCell(13, 2, 'Tests.CreateEmployeeTest')
+data.setCell(13, 3, 716);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'theUserLoginOnTheCafeTownsendPortalSuccessfully')
+data.setCell(14, 2, 'Tests.LoginTest')
+data.setCell(14, 3, 575);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'the_user_clicks_on_the_logout_button')
+data.setCell(15, 2, 'Tests.LogoutTest')
+data.setCell(15, 3, 566);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'the_user_validates_the_employee_data_was_edited_correctly_on_the_CafeTownsend_portal')
+data.setCell(16, 2, 'Tests.EditEmployeeTest')
+data.setCell(16, 3, 562);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'the_user_clicks_on_the_Create_button')
+data.setCell(17, 2, 'Tests.CreateEmployeeTest')
+data.setCell(17, 3, 440);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'theUserTypesTheCredentialsProvidedOnThePortal')
+data.setCell(18, 2, 'Tests.LoginTest')
+data.setCell(18, 3, 396);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'theUserTypesAWrongCredentialsOnTheLoginPage')
+data.setCell(19, 2, 'Tests.InvalidLoginTest')
+data.setCell(19, 3, 304);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'thePortalDisplayAInvalidCredentialsWarningOnTheLoginPage')
+data.setCell(20, 2, 'Tests.InvalidLoginTest')
+data.setCell(20, 3, 273);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'the_user_clicks_on_the_Edit_button')
+data.setCell(21, 2, 'Tests.EditEmployeeTest')
+data.setCell(21, 3, 185);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'the_user_is_logout_from_the_CafeTownsend_Portal')
+data.setCell(22, 2, 'Tests.LogoutTest')
+data.setCell(22, 3, 58);
+window.suiteTableData['CafetownSend_Tests']= { tableData: data, tableDiv: 'times-div-CafetownSend_Tests'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 52 seconds</span>
+              <div id="times-div-CafetownSend_Tests">
+              </div> <!-- times-div-CafetownSend_Tests -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-CafetownSend_Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for CafetownSend Tests</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-CafetownSend_Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-CafetownSend_Tests" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">Tests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">initializeTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">theUserNavigatesToTheLoginPage</span>
+                <span class="method-start">7201 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">theUserTypesTheCredentialsProvidedOnThePortal(Luke, Skywalker)</span>
+                <span class="method-start">8097 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">theUserLoginOnTheCafeTownsendPortalSuccessfully</span>
+                <span class="method-start">8494 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardownTest</span>
+                <span class="method-start">9070 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Tests.LogoutTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">initializeTest</span>
+                <span class="method-start">10090 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">the_user_is_login_on_the_CafeTownsend_Portal(Luke, Skywalker)</span>
+                <span class="method-start">19533 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">the_user_clicks_on_the_logout_button</span>
+                <span class="method-start">20609 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">the_user_is_logout_from_the_CafeTownsend_Portal</span>
+                <span class="method-start">21176 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardownTest</span>
+                <span class="method-start">21235 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Tests.InvalidLoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">initializeTest</span>
+                <span class="method-start">21941 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">theUserNavigatesToTheLoginPage</span>
+                <span class="method-start">37468 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">theUserTypesAWrongCredentialsOnTheLoginPage(Anakin, Skywalker)</span>
+                <span class="method-start">38527 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">thePortalDisplayAInvalidCredentialsWarningOnTheLoginPage</span>
+                <span class="method-start">38832 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardownTest</span>
+                <span class="method-start">39105 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Tests.CreateEmployeeTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">initializeTest</span>
+                <span class="method-start">40048 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">The_user_login_on_the_CafeTownsend_portal(Luke, Skywalker)</span>
+                <span class="method-start">50525 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">the_user_clicks_on_the_Create_button</span>
+                <span class="method-start">51551 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">the_user_types_the_data_to_create_the_new_employee(CREATE, USER, 2020-01-01, CREATEUSER@test.com)</span>
+                <span class="method-start">51993 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">the_new_employee_created_is_displayed_on_the_employee_list(CREATE, USER)</span>
+                <span class="method-start">52938 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal(CREATE, USER, 2020-01-01, CREATEUSER@test.com)</span>
+                <span class="method-start">61402 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardownTest</span>
+                <span class="method-start">62119 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Tests.EditEmployeeTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">initializeTest</span>
+                <span class="method-start">62909 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">the_user_login_on_the_CafeTownsend_portal(Luke, Skywalker)</span>
+                <span class="method-start">69552 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">the_user_selects_an_employee_from_the_employee_list(EDIT, USER, 2020-01-01, EDITUSER@test.com)</span>
+                <span class="method-start">70752 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">the_user_clicks_on_the_Edit_button</span>
+                <span class="method-start">78074 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">the_user_edits_an_employee(NEWNAME, NEWLASTNAME, 2020-01-01, NEWNAME@test.com)</span>
+                <span class="method-start">78261 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">the_user_validates_the_employee_data_was_edited_correctly_on_the_CafeTownsend_portal(NEWNAME, NEWLASTNAME, 2020-01-01, NEWNAME@test.com)</span>
+                <span class="method-start">85856 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardownTest</span>
+                <span class="method-start">86419 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Tests.DeleteEmployeeTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">initializeTest</span>
+                <span class="method-start">88033 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">the_user_login_on_the_CafeTownsend_portal(Luke, Skywalker)</span>
+                <span class="method-start">99580 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">the_user_selects_an_employee_from_the_employee_list(DELETE, USER, 2020-01-01, DELETEUSER@test.com)</span>
+                <span class="method-start">100656 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">theUserClicksOnTheDeleteButton</span>
+                <span class="method-start">107682 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">theUserValidatesTheEmployeeWasDeletedCorrectlyFromTheCafeTownsendPortalEmployeeList(DELETE, USER)</span>
+                <span class="method-start">108688 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardownTest</span>
+                <span class="method-start">118798 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

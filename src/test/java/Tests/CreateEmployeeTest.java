@@ -7,17 +7,18 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+
 public class CreateEmployeeTest extends BaseTest {
 
     @Parameters({"user", "password"})
-    @Test(priority = 1,description = "User login on the CafeTownsend Portal")
+    @Test(priority = 1)
     @Given("the user login on the CafeTownsend portal")
     public void The_user_login_on_the_CafeTownsend_portal(String user, String password) {
 
         cafetownsend.loginpage().cafeLogIn(user, password);
     }
 
-    @Test(priority = 2,description = "User clicks on the Create button")
+    @Test(priority = 2)
     @When("the user clicks on the Create button")
     public void the_user_clicks_on_the_Create_button() {
 
@@ -27,7 +28,7 @@ public class CreateEmployeeTest extends BaseTest {
 
 
     @Parameters({"firstnameCreate", "lastnameCreate", "startdateCreate", "emailCreate"})
-    @Test(priority = 3,description = "User types the data to create the new employee")
+    @Test(priority = 3)
     @When("the user types the data to create the new employee")
     public void the_user_types_the_data_to_create_the_new_employee(String firstnameCreate, String lastnameCreate, String startdateCreate, String emailCreate) {
 
@@ -36,7 +37,7 @@ public class CreateEmployeeTest extends BaseTest {
     }
 
     @Parameters({"firstnameCreate", "lastnameCreate"})
-    @Test(priority = 4,description = "The new employee created is displayed on the employee list")
+    @Test(priority = 4)
     @Then("the new employee created is displayed on the employee list")
     public void the_new_employee_created_is_displayed_on_the_employee_list(String firstnameCreate, String lastnameCreate) {
 
@@ -46,7 +47,7 @@ public class CreateEmployeeTest extends BaseTest {
     }
 
     @Parameters({"firstnameCreate", "lastnameCreate", "startdateCreate", "emailCreate"})
-    @Test(priority = 5,description = "User validates the employee data was inserted correctly on the CafeTownsend portal")
+    @Test(priority = 5)
     @Then("the user validates the employee data was inserted correctly on the CafeTownsend portal")
     public void the_user_validates_the_employee_data_was_inserted_correctly_on_the_CafeTownsend_portal(String firstnameCreate, String lastnameCreate, String startdateCreate, String emailCreate) {
 
