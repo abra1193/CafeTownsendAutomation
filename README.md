@@ -81,7 +81,7 @@ Step 3:
 
 Ensure maven binaries are on your PATH (ie. you can run mvn from anywhere)
 
-Follow the installation instructions from here.
+Follow the installation instructions from here [here](https://mkyong.com/maven/how-to-install-maven-in-windows/).
 
 ### MacOS ###
 
