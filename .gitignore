@@ -1,5 +1,8 @@
 /.idea/
-/target
+/target/generated-test-sources/
+/target/maven-status/
+/target/surefire-reports/
+/target/test-classes/
 /out/production/CafeTownsendAutomation/META-INF/
 /CafeTownsendAutomation.iml
 /allure-results
