@@ -1,7 +1,7 @@
 # CafeTownsend automation tests
 
 ## Test Approach
-
+<div style="text-align: center">
 The tests were created with a black box testing approach,every test run inserts certain parameters on the portal expecting that the outcome is the one expected,this last part was accomplished with assertions of the parameters inserted on the portal depending on what is asked on the test case.
 
 Since this I decided to create parameterized test and those parameters are stored on the src/test/java/testng.xml file,this file contains all the variables used on the test execution,these parameters can be changed on this file,right now there are default.
@@ -157,4 +157,4 @@ The project is divided on folders(Java Packages),each folder represent an abstra
 
     A method called selectEmployee(Java list) was created for store the users located on the home page employee list and with this list we can easily find and select employees on the the employee list,this list store all li tags on the employee list and then we iterate every li tag stored on the list until it fulfills the condition of the given name on the method,I decided this since it will be very dificult to select or find a name with a simple xpath,since the employee can grow bigger and bigger with the time and in the future another element can intercept that click,so iterating the li tags will be more efficient.
 
-  A method called validateDeletedEmployee(Java list) was created for store the users located on the home page employee list and with this list we can easily verify if an employee is not longer available on the employee list,this list store all li tags on the employee list and then we iterate every li tag stored on the list until it fulfills the condition with the given name on the method,I decided this since it will be very dificult to select or find a name with a simple xpath,since the employee can grow bigger and bigger with the time and in the future another element can intercept that click,so iterating the li tags will be more efficient.
+  A method called validateDeletedEmployee(Java list) was created for store the users located on the home page employee list and with this list we can easily verify if an employee is not longer available on the employee list,this list store all li tags on the employee list and then we iterate every li tag stored on the list until it fulfills the condition with the given name on the method,I decided this since it will be very dificult to select or find a name with a simple xpath,since the employee can grow bigger and bigger with the time and in the future another element can intercept that click,so iterating the li tags will be more efficient.</div>
